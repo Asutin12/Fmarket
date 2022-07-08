@@ -21,6 +21,7 @@
             <li class="header-item"><a href="">ログイン</a></li>
             <li class="header-item"><a href="">お知らせ</a></li>
             <li class="header-item"><a href="">出品</a></li>
+            
         </ul>
     </div>
 </header>
@@ -28,7 +29,7 @@
 
 </main>
 <footer>
-    
+
 </footer>
 </body>
 </html>
