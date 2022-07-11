@@ -6,5 +6,6 @@
     <li>マイリスト</li>
     <li>ピックアップ</li>
 </ul>
+<hr>
 
 @endsection
