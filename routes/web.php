@@ -17,6 +17,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('sell','App\Http\Controllers\homeController@sell');
-Route::get('home','App\Http\Controllers\homeController@home');
+Route::get('sell','App\Http\Controllers\homeController@sell')->name('sell.home');
+Route::get('home','App\Http\Controllers\homeController@home')->name('home.index');
+
+Route::get('create','App\Http\Controllers\SellController@create')->name('sell.create');
+Route::get('drafts','App\Http\Controllers\SellController@drafts')->name('sell.drafts');
+
 

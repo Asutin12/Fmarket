@@ -9,7 +9,7 @@ class homeController extends Controller
     public function home(){
         return view('home.index');
     }
-    public function sell(){
+    public function sell(Request $request){
         return view('sell.home');
     }
 }

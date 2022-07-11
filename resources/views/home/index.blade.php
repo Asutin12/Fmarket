@@ -1,11 +1,12 @@
-@extends('layouts.layout')
+@extends('layouts.other')
+
+@section('detail')
+    <a href="">おすすめ</a>
+    <a href="">マイリスト</a>
+    <a href="">ピックアップ</a>
+@endsection
 
 @section('content')
-<ul>
-    <li>おすすめ</li>
-    <li>マイリスト</li>
-    <li>ピックアップ</li>
-</ul>
-<hr>
+<h1 class="home-title">おすすめの商品</h1>
 
 @endsection

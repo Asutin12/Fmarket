@@ -1,14 +1,12 @@
-@extends('layouts.layout')
+@extends('layouts.other')
 
 @section('title','出品')
 
 @section('content')
-<h2>商品の出品</h2>
+<h2 class="mini-title">商品の出品</h2>
 <ul class="sell">
-    <li class="sell-item">
-        <a href="">出品する</a>
-        <a href="">下書き一覧</a>
-    </li>
+    <p><a class="sell-item" href="{{route('sell.create')}}">出品する</a></p>
+    <p><a class="sell-item" href="{{route('sell.drafts')}}">下書き一覧</a></p>
 </ul>
 
 @endsection
