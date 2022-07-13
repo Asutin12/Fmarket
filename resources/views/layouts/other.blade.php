@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>@yield('title')</title>
     <link rel="stylesheet" href="/resources/css/reset.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
     <style>
@@ -16,14 +16,16 @@
         .datail{display: flex;padding-left: 200px;}
         a{text-decoration: none;padding:10px 20px;}
         a:hover{background-color: #b4c1d1;}
-        main{width: 700px;margin: 0 auto; text-align: center;}
+        main{width: 650px;margin: 0 auto; text-align: center;}
         .title{margin: 0 auto;text-align: center;}
         .mini-title{padding-bottom: 20px;text-align: left;}
-        .content{margin: 0 auto; text-align:left;}
+        .content{margin: 0 auto; text-align:left; padding-bottom: 50px;}
         .home-title{color: gray;padding-left: 200px;width: 300px;font-size: 25px}
         .sell{display: flex;justify-content: space-between; margin: 0 auto; text-align: center;}
         .sell-item{border: 1px solid #b4c1d1;border-radius:7px; padding:50px 100px;width: 150px;}
-        .footer{background-color: pink;height: 500px;display: flex;}
+        footer{background-color: pink;}
+        .footer{width: 50%;height: 400px;display: flex;justify-content: space-between;text-align: left;}
+        .footer-buttom{padding: 20px;}
     </style>
 </head>
 <body>
@@ -53,6 +55,7 @@
         @yield('content')
     </div>
 </main>
+<hr>
 <footer>
     <div class="footer">
         <div class="shop">

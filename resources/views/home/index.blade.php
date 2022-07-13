@@ -1,4 +1,4 @@
-@extends('layouts.other')
+@extends('layouts.home')
 
 @section('detail')
     <a href="">おすすめ</a>
