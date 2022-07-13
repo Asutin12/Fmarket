@@ -2,7 +2,7 @@
 
 @section('detail')
     <a href="">おすすめ</a>
-    <a href="">マイリスト</a>
+    <a href="{{route('home.mylist')}}">マイリスト</a>
     <a href="">ピックアップ</a>
 @endsection
 

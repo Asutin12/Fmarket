@@ -12,4 +12,7 @@ class homeController extends Controller
     public function sell(Request $request){
         return view('sell.home');
     }
+    public function mylist(Request $request){
+        return view('home.mylist');
+    }
 }

@@ -16,7 +16,7 @@
         .datail{display: flex;padding-left: 200px;}
         a{text-decoration: none;padding:10px 20px;}
         a:hover{background-color: #b4c1d1;}
-        main{width: 700px;margin: 0 auto; text-align: center;}
+        main{width: 1250px;margin: 0 auto; text-align: center;}
         .title{margin: 0 auto;text-align: center;}
         .mini-title{padding-bottom: 20px;text-align: left;}
         .content{margin: 0 auto; text-align:left;}
@@ -24,8 +24,10 @@
         .sell{display: flex;justify-content: space-between; margin: 0 auto; text-align: center;}
         .sell-item{border: 1px solid #b4c1d1;border-radius:7px; padding:50px 100px;width: 150px;}
         footer{background-color: pink;}
-        .footer{width: 50%;height: 400px;display: flex;justify-content: space-between;text-align: left;}
+        .footer{width: 50%;margin-top: 30px; height: 400px;display: flex;justify-content: space-between;text-align: left;}
         .footer-buttom{padding: 20px;}
+        section{padding-bottom: 50px;padding-top: 20px;}
+        .section-title{text-align: left;}
     </style>
 </head>
 <body>
