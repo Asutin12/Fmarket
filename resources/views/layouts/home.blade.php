@@ -12,7 +12,7 @@
         .header-right{display: flex;align-items: center;justify-content: space-between;}
         .header-left{display: flex;align-items: center;justify-content: space-between; width: 700px;}
         .search{border: 1px solid gray;padding: 2px 250px;}
-        .header-list{display: flex;align-items: center;width: 400px;justify-content: space-between;text-align: right;}
+        .header-list{font-size: 15px; display: flex;align-items: center;width: 500px;justify-content: space-between;text-align: right;}
         .datail{display: flex;padding-left: 200px;}
         a{text-decoration: none;padding:10px 20px;}
         a:hover{background-color: #b4c1d1;}
@@ -34,7 +34,7 @@
 <header>
     <div class="header">
         <div class="header-left">
-            <a href="{{route('home.index')}}" class="header-title">Title</a>
+            <a href="" class="header-title">Title</a>
             <p class="search">検索機能</p>
         </div>
         <div class="header-right">
@@ -42,6 +42,7 @@
                 <p class="header-item"><a href="">会員登録</a></p>
                 <p class="header-item"><a href="">ログイン</a></p>
                 <p class="header-item"><a href="">お知らせ</a></p>
+                <p class="header-item"><a href="">アカウント</a></p>
                 <p class="header-item"><a href="{{route('sell.home')}}">出品</a></p>
             </ul>
         </div>

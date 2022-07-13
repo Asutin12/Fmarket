@@ -17,11 +17,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('sell','App\Http\Controllers\homeController@sell')->name('sell.home');
-Route::get('home','App\Http\Controllers\homeController@home')->name('home.index');
-Route::get('mylist','App\Http\Controllers\homeController@mylist')->name('home.mylist');
+Route::get('sell','App\Http\Controllers\Home\MainController@sell')->name('sell.home');
+Route::get('home','App\Http\Controllers\Home\MainController@home')->name('home.index');
+Route::get('mylist','App\Http\Controllers\Home\MainController@mylist')->name('home.mylist');
 
 
-Route::get('create','App\Http\Controllers\SellController@create')->name('sell.create');
-Route::get('drafts','App\Http\Controllers\SellController@drafts')->name('sell.drafts');
+Route::get('create','App\Http\Controllers\Sell\SellController@create')->name('sell.create');
+Route::get('drafts','App\Http\Controllers\Sell\SellController@drafts')->name('sell.drafts');
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
