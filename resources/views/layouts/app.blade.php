@@ -18,17 +18,27 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <style>
+        .container{display: flex;justify-content: space-between;align-items: center;}
+        .navbar-nav{width: 300px;display: flex;justify-content: space-between;}
+        .card-header{padding-bottom: 100px;font-weight: bold;font-size: 20px;}
+        .py-4{text-align: center; margin: 0 auto; width: 500px;}
+        .row{padding-bottom: 10px;}
+        .input{display: flex;justify-content: space-between;}
+        input{padding: 10px 10px;width: 100%;border-radius: 5px;font-size: 20px;}
+        .col-md-6-b{max-width:90px;padding-top: 10px;}
+        .col-md-6{padding-top: 10px;}
+        label{font-weight: bold; font-size: 15px;}
+        .input-item{width: 45%;}
+    </style>
 </head>
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                <a class="navbar-brand" href="{{ url('/main') }}">
+                    Home
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
@@ -74,7 +84,7 @@
                 </div>
             </div>
         </nav>
-
+        <hr>
         <main class="py-4">
             @yield('content')
         </main>
