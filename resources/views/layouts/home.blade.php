@@ -34,15 +34,15 @@
 <header>
     <div class="header">
         <div class="header-left">
-            <a href="" class="header-title">Title</a>
+            <a href="{{route('home.index')}}" class="header-title">Title</a>
             <p class="search">検索機能</p>
         </div>
         <div class="header-right">
             <ul class="header-list">
-                <p class="header-item"><a href="">会員登録</a></p>
-                <p class="header-item"><a href="">ログイン</a></p>
+                <p class="header-item"><a href="{{ route('register') }}">会員登録</a></p>
+                <p class="header-item"><a href="{{route('home')}}">ログイン</a></p>
                 <p class="header-item"><a href="">お知らせ</a></p>
-                <p class="header-item"><a href="">アカウント</a></p>
+                <p class="header-item"><a href="{{route('account.mypage')}}">アカウント</a></p>
                 <p class="header-item"><a href="{{route('sell.home')}}">出品</a></p>
             </ul>
         </div>

@@ -1,7 +1,7 @@
 @extends('layouts.home')
 
 @section('detail')
-    <a href="">おすすめ</a>
+    <a href="{{route('home.index')}}">おすすめ</a>
     <a href="{{route('home.mylist')}}">マイリスト</a>
     <a href="">ピックアップ</a>
 @endsection
