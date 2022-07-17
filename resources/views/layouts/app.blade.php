@@ -28,6 +28,7 @@
         input{padding: 10px 10px;width: 100%;border-radius: 5px;font-size: 20px;}
         .col-md-6-b{max-width:90px;padding-top: 10px;}
         .col-md-6{padding-top: 10px;}
+        .birthday{font-size: 20px;}
         label{font-weight: bold; font-size: 15px;}
         .input-item{width: 45%;}
     </style>

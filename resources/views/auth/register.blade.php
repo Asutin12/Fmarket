@@ -125,6 +125,7 @@
                                         </span>
                                     @enderror
                                 </div>
+                                <p class="birthday">年</p>
                                 <div class="col-md-6-b">
                                     <input id="birth_day_mm" type="text" class="form-control @error('birth_day_mm') is-invalid @enderror" name="birth_day_mm" value="{{ old('birth_day_mm') }}" required autocomplete="birth_day_mm" autofocus>
 
@@ -134,6 +135,7 @@
                                         </span>
                                     @enderror
                                 </div>
+                                <p class="birthday">月</p>
                                 <div class="col-md-6-b">
                                     <input id="birth_day_dd" type="text" class="form-control @error('birth_day_dd') is-invalid @enderror" name="birth_day_dd" value="{{ old('birth_day_dd') }}" required autocomplete="birth_day_dd" autofocus>
 
@@ -143,13 +145,14 @@
                                         </span>
                                     @enderror
                                 </div>
+                                <p class="birthday">日</p>
                             </div>
                         </div>
 
                         <div class="row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
-                                    {{ __('Register') }}
+                                    {{ __('登録') }}
                                 </button>
                             </div>
                         </div>
