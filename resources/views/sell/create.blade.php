@@ -36,7 +36,7 @@
         <input type="number" name="price">
     </section>
     <section>
-
+        <button type="submit">出品</button>
     </section>
 </div>
 @endsection
