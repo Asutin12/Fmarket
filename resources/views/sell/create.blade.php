@@ -5,21 +5,21 @@
 @section('content')
 <div class="listing">
     <h1 class="title">商品の出品</h1>
-    <section>
+    {{-- <section>
         <div class="section-title">商品の詳細</div>
         <p class="section-item">カテゴリー</p>
         <input type="text" name="category">
         <p class="section-item">商品の状態</p>
         <input type="text" name="situation">
-    </section>
+    </section> --}}
     <section>
         <div class="section-title">商品名と説明</div>
         <p class="section-item">商品名</p>
         <input type="text" name="name">
         <p class="section-item">商品の説明</p>
-        <textarea name="explanation" id="" cols="30" rows="10"></textarea>
+        <textarea name="description" id="" cols="30" rows="10"></textarea>
     </section>
-    <section>
+    {{-- <section>
         <div class="section-title">配送について</div>
         <p class="section-item">配送料の負担</p>
         <input type="text" name="Dcharge">
@@ -29,7 +29,7 @@
         <input type="text" name="Darea">
         <p class="section-item">発送までの日数</p>
         <input type="text" name="Ddays">
-    </section>
+    </section> --}}
     <section>
         <div class="section-title">販売価格</div>
         <p class="section-item">販売価格</p>
