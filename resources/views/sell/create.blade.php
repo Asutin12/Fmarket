@@ -3,7 +3,7 @@
 @section('title','商品の出品')
 
 @section('content')
-<div class="listing">
+<form method="post" action="{{route('create.post')}}" class="listing">
     <h1 class="title">商品の出品</h1>
     {{-- <section>
         <div class="section-title">商品の詳細</div>
@@ -14,10 +14,32 @@
     </section> --}}
     <section>
         <div class="section-title">商品名と説明</div>
-        <p class="section-item">商品名</p>
-        <input type="text" name="name">
-        <p class="section-item">商品の説明</p>
-        <textarea name="description" id="" cols="30" rows="10"></textarea>
+        <div class="row mb-3">
+            <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('商品名') }}</label>
+
+            <div class="col-md-6">
+                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+
+                @error('name')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label for="description" class="col-md-4 col-form-label text-md-end">{{ __('商品の説明') }}</label>
+
+            <div class="col-md-6">
+                <textarea id="description" type="text" class="form-control @error('description') is-invalid @enderror" name="description" value="{{ old('description') }}" required autocomplete="description" autofocus></textarea>
+
+                @error('description')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
+            </div>
+        </div>
     </section>
     {{-- <section>
         <div class="section-title">配送について</div>
@@ -32,11 +54,28 @@
     </section> --}}
     <section>
         <div class="section-title">販売価格</div>
-        <p class="section-item">販売価格</p>
-        <input type="number" name="price">
+        <div class="row mb-3">
+            <label for="price" class="col-md-4 col-form-label text-md-end">{{ __('販売価格') }}</label>
+
+            <div class="col-md-6">
+                <input id="price" type="number" class="form-control @error('price') is-invalid @enderror" name="price" value="{{ old('price') }}" required autocomplete="price" autofocus>
+
+                @error('price')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
+            </div>
+        </div>
     </section>
     <section>
-        <button type="submit">出品</button>
+        <div class="row mb-0">
+            <div class="col-md-6 offset-md-4">
+                <button type="submit" class="btn btn-primary">
+                    {{ __('出品') }}
+                </button>
+            </div>
+        </div>
     </section>
-</div>
+</form>
 @endsection

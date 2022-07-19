@@ -11,7 +11,8 @@ use Illuminate\Support\Facades\Auth;
 class MainController extends Controller
 {
     public function home(){
-        return view('home.index');
+        $items = DB::select('select * from items');
+        return view('home.index',['items'=>$items]);
     }
     public function sell(Request $request){
         return view('sell.home');

@@ -13,9 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Route::get('sell','App\Http\Controllers\Home\MainController@sell')->name('sell.home');
 Route::get('main','App\Http\Controllers\Home\MainController@home')->name('home.index');
@@ -27,10 +27,10 @@ Route::post('account','App\Http\Controllers\Home\MainController@post')->name('ac
 
 // Route::get('create','App\Http\Controllers\Sell\SellController@create')->name('sell.create');
 Route::get('create','App\Http\Controllers\ItemController@add')->name('sell.create');
-Route::post('create','App\Http\Controllers\ItemController@create')->name('sell.create');
+Route::post('create','App\Http\Controllers\ItemController@create')->name('create.post');
 Route::get('drafts','App\Http\Controllers\Sell\SellController@drafts')->name('sell.drafts');
 
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

@@ -12,10 +12,10 @@
         .title{text-align: center; font-size: 30px;}
         .content{width: 550px; text-align: center; margin: 0 auto;}
         section{padding-top: 20px;}
-        .section-title{text-align: center; font-size: 20px}
-        .section-item{text-align: left;font-size: 15px}
-        input{width: 100%;line-height: 3;}
-        textarea{width: 100%;}
+        .section-title{text-align: left; font-size: 20px}
+        .label{text-align: left;font-size: 15px}
+        input{width: 100%;line-height: 2;padding: 10px;}
+        textarea{width: 100%;height: 200px;padding: 10px;}
         footer{background-color: pink;}
         .footer{width: 50%;height: 400px;display: flex;justify-content: space-between;text-align: left;}
         .footer-buttom{padding: 20px;}
