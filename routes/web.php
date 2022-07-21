@@ -26,8 +26,9 @@ Route::post('account','App\Http\Controllers\Home\MainController@post')->name('ac
 
 
 // Route::get('create','App\Http\Controllers\Sell\SellController@create')->name('sell.create');
-Route::get('create','App\Http\Controllers\ItemController@add')->name('sell.create');
-Route::post('create','App\Http\Controllers\ItemController@create')->name('create.post');
+Route::get('create','App\Http\Controllers\Home\MainController@add')->name('sell.create');
+// Route::post('main','App\Http\Controllers\Home\MainController@')->name('home.post');
+Route::post('main','App\Http\Controllers\Home\MainController@home')->name('home.index');
 Route::get('drafts','App\Http\Controllers\Sell\SellController@drafts')->name('sell.drafts');
 
 

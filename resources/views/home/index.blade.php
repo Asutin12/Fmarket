@@ -8,4 +8,6 @@
 
 @section('content')
 <h1 class="home-title">おすすめの商品</h1>
+<hr>
+<p>{{$items->name}}</p>
 @endsection

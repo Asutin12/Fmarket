@@ -3,7 +3,7 @@
 @section('title','商品の出品')
 
 @section('content')
-<form method="post" action="{{route('create.post')}}" class="listing">
+<form method="post" action="{{route('home.post')}}" class="listing">
     <h1 class="title">商品の出品</h1>
     {{-- <section>
         <div class="section-title">商品の詳細</div>

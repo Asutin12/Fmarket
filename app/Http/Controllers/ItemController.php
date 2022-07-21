@@ -13,10 +13,7 @@ class ItemController extends Controller
         return view('sell.create');
     }
     public function create(Request $request){
-        $item = new Item;
-        $form = $request->all();
-        unset($form['_token']);
-        $item->fill($form)->save();
-        return view('home.index');
+        $items = DB::select('select * from items');
+        return redirect()->route('home.index',['items'=>$items]);
     }
 }
