@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('sell','App\Http\Controllers\Home\MainController@sell')->name('sell.home');
-Route::get('main','App\Http\Controllers\Home\MainController@home')->name('home.index');
+Route::get('main','App\Http\Controllers\Home\MainController@home')->name('home.post');
 Route::get('mylist','App\Http\Controllers\Home\MainController@mylist')->name('home.mylist');
 Route::get('account','App\Http\Controllers\Home\MainController@index')->name('account.mypage');
 Route::post('account','App\Http\Controllers\Home\MainController@post')->name('account.mypage');
