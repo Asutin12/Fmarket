@@ -24,11 +24,16 @@ class MainController extends Controller
         $user = Auth::user();
         return view('account.mypage',compact('user'));
     }
-    // public function post(Request $request){
-    //     $items = DB::select('select * from users');
-    //     return view('home.index',['items'=>$items]);
-    // }
     public function add(Request $request){
         return view('sell.create');
+    }
+    public function create(Request $request){
+        $data = [
+            'name'=>$request->name,
+            'description'=>$request->description,
+            'price'=>$request->price,
+        ];
+        DB::table('items')->insert($data);
+        return redirect('home.index');
     }
 }
