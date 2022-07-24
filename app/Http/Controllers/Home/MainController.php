@@ -24,6 +24,10 @@ class MainController extends Controller
         $user = Auth::user();
         return view('account.mypage',compact('user'));
     }
+    public function post(Request $request){
+        $items = DB::select('select * from users');
+        return view('account.mypage',['items'=>$items]);
+    }
     public function add(Request $request){
         return view('sell.create');
     }

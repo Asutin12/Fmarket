@@ -21,12 +21,12 @@ Route::get('sell','App\Http\Controllers\Home\MainController@sell')->name('sell.h
 Route::get('main','App\Http\Controllers\Home\MainController@home')->name('home.index');
 Route::get('mylist','App\Http\Controllers\Home\MainController@mylist')->name('home.mylist');
 Route::get('account','App\Http\Controllers\Home\MainController@index')->name('account.mypage');
-Route::post('account','App\Http\Controllers\Home\MainController@post')->name('account.mypage');
+Route::post('account','App\Http\Controllers\Home\MainController@post');
 
 
 
 Route::get('create','App\Http\Controllers\Home\MainController@add')->name('sell.create');
-Route::post('create','App\Http\Controllers\Home\MainController@create')->name('sell.create');
+Route::post('create','App\Http\Controllers\Home\MainController@create');
 Route::get('drafts','App\Http\Controllers\Sell\SellController@drafts')->name('sell.drafts');
 
 
