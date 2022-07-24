@@ -38,6 +38,6 @@ class MainController extends Controller
             'price'=>$request->price,
         ];
         DB::table('items')->insert($data);
-        return redirect('home.index');
+        return redirect('main');
     }
 }

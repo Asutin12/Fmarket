@@ -9,5 +9,11 @@
 @section('content')
 <h1 class="home-title">おすすめの商品</h1>
 <hr>
-{{-- <p>{{$items->name}}</p> --}}
+<div class="item-box">
+    @foreach ($items as $item)
+    <p>{{$item->name}}</p>
+    <p>{{$item->description}}</p>
+    <p>¥{{$item->price}}</p>
+    @endforeach
+</div>
 @endsection

@@ -8,10 +8,30 @@
     <h1 class="title">商品の出品</h1>
     {{-- <section>
         <div class="section-title">商品の詳細</div>
-        <p class="section-item">カテゴリー</p>
-        <input type="text" name="category">
-        <p class="section-item">商品の状態</p>
-        <input type="text" name="situation">
+        <div class="row mb-3">
+            <label for="category" class="col-md-4 col-form-label text-md-end">{{ __('カテゴリー') }}</label>
+
+            <div class="col-md-6">
+                <input id="category" type="text" class="form-control @error('category') is-invalid @enderror" name="category" value="{{ old('category') }}" required autocomplete="category" autofocus>
+                @error('category')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label for="situation" class="col-md-4 col-form-label text-md-end">{{ __('商品の状態') }}</label>
+
+            <div class="col-md-6">
+                <input id="situation" type="text" class="form-control @error('situation') is-invalid @enderror" name="situation" value="{{ old('situation') }}" required autocomplete="situation" autofocus>
+                @error('situation')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
+            </div>
+        </div>
     </section> --}}
     <section>
         <div class="section-title">商品名と説明</div>
