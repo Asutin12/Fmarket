@@ -6,7 +6,7 @@
 <form method="post" action="{{route('sell.create')}}" class="listing">
     @csrf
     <h1 class="title">商品の出品</h1>
-    {{-- {{-- <section>
+    {{-- <section>
         <div class="section-title">商品の詳細</div>
         <div class="row mb-3">
             <label for="category" class="col-md-4 col-form-label text-md-end">{{ __('カテゴリー') }}</label>
@@ -20,7 +20,7 @@
                 @enderror
             </div>
         </div> --}}
-        <div class="row mb-3">
+        {{-- <div class="row mb-3">
             <label for="situation" class="col-md-4 col-form-label text-md-end">{{ __('商品の状態') }}</label>
 
             <div class="col-md-6">
