@@ -36,6 +36,7 @@ class MainController extends Controller
             'name'=>$request->name,
             'description'=>$request->description,
             'price'=>$request->price,
+            'image'=>$request->image,
         ];
         DB::table('items')->insert($data);
         return redirect('main');

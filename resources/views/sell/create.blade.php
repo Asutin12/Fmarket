@@ -6,6 +6,21 @@
 <form method="post" action="{{route('sell.create')}}" class="listing">
     @csrf
     <h1 class="title">商品の出品</h1>
+    <section>
+        <div class="row mb-3">
+            <label for="image" class="col-md-4 col-form-label text-md-end">{{ __('出品画像') }}</label>
+
+            <div class="col-md-6">
+                <input id="image" type="file" class="form-control @error('image') is-invalid @enderror" name="image" value="{{ old('image') }}" required autocomplete="image" autofocus>
+
+                @error('image')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
+            </div>
+        </div>
+    </section>
     {{-- <section>
         <div class="section-title">商品の詳細</div>
         <div class="row mb-3">

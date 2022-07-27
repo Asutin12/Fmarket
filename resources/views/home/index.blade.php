@@ -11,9 +11,12 @@
 <hr>
 <div class="item-box">
     @foreach ($items as $item)
+    <a href="">
+    <img src="{{$item->image}}" width="300px" alt="">
     <p>{{$item->name}}</p>
     <p>{{$item->description}}</p>
     <p>¥{{$item->price}}</p>
+    </a>
     @endforeach
 </div>
 @endsection
