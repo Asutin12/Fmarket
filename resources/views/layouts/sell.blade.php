@@ -10,12 +10,14 @@
         .header-right{display: flex;align-items: center;justify-content: space-between;}
         .header-list{display: flex;align-items: center;width: 600px;justify-content: space-between;}
         .title{text-align: center; font-size: 30px;}
-        .content{width: 550px; text-align: center; margin: 0 auto;}
+        .content{width: 550px; text-align: center; margin: 0 auto;font-weight: bold}
         section{padding-top: 20px;}
-        .section-title{text-align: left; font-size: 20px}
-        .label{text-align: left;font-size: 15px}
-        input{width: 100%;line-height: 2;padding: 10px;}
-        textarea{width: 100%;height: 200px;padding: 10px;}
+        .section-title{text-align: left; font-size: 20px;padding-bottom: 10px;color: gray;}
+        .row{text-align: left;font-size: 15px;padding-bottom: 10px;}
+        input{width: 100%;line-height: 2;padding: 10px;margin-top: 10px;}
+        select{width: 575px;margin-bottom: 20px;padding: 10px;margin-top: 10px;}
+        textarea{width: 100%;height: 200px;padding: 10px;margin-top: 10px;}
+        button{background-color: #ffeeff; color: rgb(21, 1, 18);width: 80%;padding: 10px;border-radius: 5px;margin-bottom: 20px;}
         footer{background-color: pink;}
         .footer{width: 50%;height: 400px;display: flex;justify-content: space-between;text-align: left;}
         .footer-buttom{padding: 20px;}

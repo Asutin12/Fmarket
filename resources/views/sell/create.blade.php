@@ -3,7 +3,7 @@
 @section('title','商品の出品')
 
 @section('content')
-<form method="post" action="{{route('sell.create')}}" class="listing">
+<form method="post" action="{{route('sell.create')}}" enctype="multipart/form-data" class="listing">
     @csrf
     <h1 class="title">商品の出品</h1>
     <section>
@@ -77,17 +77,73 @@
             </div>
         </div>
     </section>
-    {{-- <section>
+    <section>
         <div class="section-title">配送について</div>
-        <p class="section-item">配送料の負担</p>
-        <input type="text" name="Dcharge">
-        <p class="section-item">配送の方法</p>
-        <input type="text" name="Dmethod">
-        <p class="section-item">発送元の地域</p>
-        <input type="text" name="Darea">
-        <p class="section-item">発送までの日数</p>
-        <input type="text" name="Ddays">
-    </section> --}}
+        <div class="row mb-3">
+            <label for="Dcharge" class="col-md-4 col-form-label text-md-end">{{ __('配送料の負担') }}</label>
+
+            <div class="col-md-6">
+                <select id="Dcharge" type="text" class="form-control @error('Dcharge') is-invalid @enderror" name="Dcharge" value="{{ old('Dcharge') }}" required autocomplete="Dcharge" autofocus>
+                    <option value="">送料込み（出品者負担）</option>
+                    <option value="">着払い（購入者負担）</option>
+                @error('Dcharge')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
+                </select>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <label for="Dmethod" class="col-md-4 col-form-label text-md-end">{{ __('配送の方法') }}</label>
+
+            <div class="col-md-6">
+                <select id="Dmethod" type="text" class="form-control @error('Dmethod') is-invalid @enderror" name="Dmethod" value="{{ old('Dmethod') }}" required autocomplete="Dmethod" autofocus>
+                    <option value="">未定</option>
+                    <option value="">普通郵便</option>
+                    <option value="">クロネコヤマト</option>
+                @error('Dmethod')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
+            </select>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label for="Darea" class="col-md-4 col-form-label text-md-end">{{ __('発送元の地域') }}</label>
+
+            <div class="col-md-6">
+                <select id="Darea" type="text" class="form-control @error('Darea') is-invalid @enderror" name="Darea" value="{{ old('Darea') }}" required autocomplete="Darea" autofocus>
+                    <option value="">未定</option>
+                    <option value="">普通郵便</option>
+                    <option value="">クロネコヤマト</option>
+                @error('Darea')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
+            </select>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label for="Ddays" class="col-md-4 col-form-label text-md-end">{{ __('発送までの日数') }}</label>
+
+            <div class="col-md-6">
+                <select id="Ddays" type="text" class="form-control @error('Ddays') is-invalid @enderror" name="Ddays" value="{{ old('Ddays') }}" required autocomplete="Ddays" autofocus>
+                    <option value="">１〜２日</option>
+                    <option value="">２〜４日</option>
+                    <option value="">４〜７日</option>
+                @error('Ddays')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
+            </select>
+            </div>
+        </div>
+    </section>
     <section>
         <div class="section-title">販売価格</div>
         <div class="row mb-3">
@@ -105,10 +161,10 @@
         </div>
     </section>
     <section>
-        <div class="row mb-0">
+        <div class="mb-0">
             <div class="col-md-6 offset-md-4">
                 <button type="submit" class="btn btn-primary">
-                    {{ __('出品') }}
+                    {{ __('出品する') }}
                 </button>
             </div>
         </div>

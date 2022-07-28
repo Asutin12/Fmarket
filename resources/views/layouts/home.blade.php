@@ -15,7 +15,7 @@
         .header-list{font-size: 15px; display: flex;align-items: center;width: 500px;justify-content: space-between;text-align: right;}
         .datail{display: flex;padding-left: 200px;}
         a{text-decoration: none;padding:10px 20px;}
-        a:hover{background-color: #b4c1d1;}
+        a:hover{background-color: #ffeeff;}
         main{width: 1250px;margin: 0 auto; text-align: center;}
         .title{margin: 0 auto;text-align: center;}
         .mini-title{padding-bottom: 20px;text-align: left;}
