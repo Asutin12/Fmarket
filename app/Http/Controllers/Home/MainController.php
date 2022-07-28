@@ -28,6 +28,9 @@ class MainController extends Controller
         $items = DB::select('select * from users');
         return view('account.mypage',['items'=>$items]);
     }
+    public function item(Request $request){
+        return view('items.index');
+    }
     public function add(Request $request){
         return view('sell.create');
     }

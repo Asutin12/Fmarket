@@ -11,8 +11,8 @@
 <hr>
 <div class="item-box">
     @foreach ($items as $item)
-    <a class="item" href="">
-    <img src="{{$item->image}}" width="300px" alt="">
+    <a class="item" href="{{route('items.index')}}">
+    <img src="{{asset($item->image)}}"  alt="">
     <p>{{$item->name}}</p>
     {{-- <p>{{$item->description}}</p> --}}
     <p>¥{{$item->price}}</p>

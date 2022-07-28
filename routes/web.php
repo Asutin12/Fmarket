@@ -24,6 +24,7 @@ Route::get('mylist','App\Http\Controllers\Home\MainController@mylist')->name('ho
 Route::get('account','App\Http\Controllers\Home\MainController@index')->name('account.mypage');
 Route::post('account','App\Http\Controllers\Home\MainController@post');
 
+Route::get('item','App\Http\Controllers\Home\MainController@item')->name('items.index');
 
 
 Route::get('create','App\Http\Controllers\Home\MainController@add')->name('sell.create');
