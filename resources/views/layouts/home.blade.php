@@ -28,6 +28,8 @@
         .footer-buttom{padding: 20px;}
         section{padding-bottom: 50px;padding-top: 20px;}
         .section-title{text-align: left;}
+        .item-box{display: flex;justify-content: flex-start;}
+        .item{margin-right: 20px;}
     </style>
 </head>
 <body>
