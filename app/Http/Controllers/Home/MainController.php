@@ -41,6 +41,10 @@ class MainController extends Controller
             'description'=>$request->description,
             'price'=>$request->price,
             'image'=>$request->image,
+            'delivaryCharge'=>$request->delivaryCharge,
+            'delivaryMethod'=>$request->delivaryMethod,
+            'delivaryArea'=>$request->delivaryArea,
+            'delivaryDays'=>$request->delivaryDays,
         ];
         DB::table('items')->insert($item);
         return redirect('main');
