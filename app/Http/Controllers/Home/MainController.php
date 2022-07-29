@@ -35,13 +35,14 @@ class MainController extends Controller
         return view('sell.create');
     }
     public function create(Request $request){
-        $data = [
+        $item = [
+            'id'=>$request->id,
             'name'=>$request->name,
             'description'=>$request->description,
             'price'=>$request->price,
             'image'=>$request->image,
         ];
-        DB::table('items')->insert($data);
+        DB::table('items')->insert($item);
         return redirect('main');
     }
 }

@@ -80,13 +80,13 @@
     <section>
         <div class="section-title">配送について</div>
         <div class="row mb-3">
-            <label for="Dcharge" class="col-md-4 col-form-label text-md-end">{{ __('配送料の負担') }}</label>
+            <label for="Delivary-charge" class="col-md-4 col-form-label text-md-end">{{ __('配送料の負担') }}</label>
 
             <div class="col-md-6">
-                <select id="Dcharge" type="text" class="form-control @error('Dcharge') is-invalid @enderror" name="Dcharge" value="{{ old('Dcharge') }}" required autocomplete="Dcharge" autofocus>
+                <select id="Delivary-charge" type="text" class="form-control @error('Delivary-charge') is-invalid @enderror" name="Delivary-charge" value="{{ old('Delivary-charge') }}" required autocomplete="Delivary-charge" autofocus>
                     <option value="">送料込み（出品者負担）</option>
                     <option value="">着払い（購入者負担）</option>
-                @error('Dcharge')
+                @error('Delivary-charge')
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
                     </span>
@@ -96,14 +96,14 @@
         </div>
 
         <div class="row mb-3">
-            <label for="Dmethod" class="col-md-4 col-form-label text-md-end">{{ __('配送の方法') }}</label>
+            <label for="Delivary-method" class="col-md-4 col-form-label text-md-end">{{ __('配送の方法') }}</label>
 
             <div class="col-md-6">
-                <select id="Dmethod" type="text" class="form-control @error('Dmethod') is-invalid @enderror" name="Dmethod" value="{{ old('Dmethod') }}" required autocomplete="Dmethod" autofocus>
+                <select id="Delivary-method" type="text" class="form-control @error('Delivary-method') is-invalid @enderror" name="Delivary-method" value="{{ old('Delivary-method') }}" required autocomplete="Delivary-method" autofocus>
                     <option value="">未定</option>
                     <option value="">普通郵便</option>
                     <option value="">クロネコヤマト</option>
-                @error('Dmethod')
+                @error('Delivary-method')
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
                     </span>
@@ -112,14 +112,14 @@
             </div>
         </div>
         <div class="row mb-3">
-            <label for="Darea" class="col-md-4 col-form-label text-md-end">{{ __('発送元の地域') }}</label>
+            <label for="Delivary-area" class="col-md-4 col-form-label text-md-end">{{ __('発送元の地域') }}</label>
 
             <div class="col-md-6">
-                <select id="Darea" type="text" class="form-control @error('Darea') is-invalid @enderror" name="Darea" value="{{ old('Darea') }}" required autocomplete="Darea" autofocus>
+                <select id="Delivary-area" type="text" class="form-control @error('Delivary-area') is-invalid @enderror" name="Delivary-area" value="{{ old('Delivary-area') }}" required autocomplete="Delivary-area" autofocus>
                     <option value="">未定</option>
                     <option value="">普通郵便</option>
                     <option value="">クロネコヤマト</option>
-                @error('Darea')
+                @error('Delivary-area')
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
                     </span>
@@ -128,14 +128,14 @@
             </div>
         </div>
         <div class="row mb-3">
-            <label for="Ddays" class="col-md-4 col-form-label text-md-end">{{ __('発送までの日数') }}</label>
+            <label for="Delivary-days" class="col-md-4 col-form-label text-md-end">{{ __('発送までの日数') }}</label>
 
             <div class="col-md-6">
-                <select id="Ddays" type="text" class="form-control @error('Ddays') is-invalid @enderror" name="Ddays" value="{{ old('Ddays') }}" required autocomplete="Ddays" autofocus>
+                <select id="Delivary-days" type="text" class="form-control @error('Delivary-days') is-invalid @enderror" name="Delivary-days" value="{{ old('Delivary-days') }}" required autocomplete="Delivary-days" autofocus>
                     <option value="">１〜２日</option>
                     <option value="">２〜４日</option>
                     <option value="">４〜７日</option>
-                @error('Ddays')
+                @error('Delivary-days')
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
                     </span>
