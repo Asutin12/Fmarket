@@ -16,5 +16,9 @@ class Item extends Model
         'category',
         'situation',
         'image',
+        'delivaryCharge',
+        'delivaryMethod',
+        'delivaryArea',
+        'delivaryDays',
     ];
 }
