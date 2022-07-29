@@ -15,9 +15,14 @@ return new class extends Migration
     {
         Schema::create('items', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('image');
             $table->string('name');
             $table->string('description');
             $table->integer('price');
+            $table->refarence('delivary-charge');
+            $table->refarence('delivary-method');
+            $table->refarence('delivary-area');
+            $table->refarence('delivary-days');
             $table->timestamps();
         });
     }
