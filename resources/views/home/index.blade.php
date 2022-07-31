@@ -10,9 +10,9 @@
 <h1 class="home-title">おすすめの商品</h1>
 <hr>
 <div class="item-box">
+    {{-- <img src="{{asset($image->path)}}"  alt=""> --}}
     @foreach ($items as $item)
     <a class="item" href="{{route('items.index')}}">
-    <img src="{{asset($item->image)}}"  alt="">
     <p>{{$item->name}}</p>
     {{-- <p>{{$item->description}}</p> --}}
     <p>¥{{$item->price}}</p>
