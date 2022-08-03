@@ -35,8 +35,8 @@ class MainController extends Controller
         return view('sell.create');
     }
     public function create(Request $request){
-        // $dir = 'sample';
-        // $request->file('image')->store('public/' . $dir);
+        $dir = 'sample';
+        $request->file('image')->store('public/' . $dir);
         // $image = 'storage/' . $dir . '/' . $file_name;
         $item = [
             'id'=>$request->id,
