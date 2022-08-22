@@ -28,7 +28,8 @@ class MainController extends Controller
         $items = DB::select('select * from users');
         return view('account.mypage',['items'=>$items]);
     }
-    public function item(Request $request){
+    public function item(Request $request, int $post_id){
+        
         return view('items.index');
     }
     public function add(Request $request){
