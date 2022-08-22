@@ -29,8 +29,9 @@ class MainController extends Controller
         return view('account.mypage',['items'=>$items]);
     }
     public function item(Request $request, int $post_id){
-        
-        return view('items.index');
+        $post = Post::find($post_id);
+        $items = Item::all();
+        return view('items.index',['post_id'=>$post_id,'items'=>$items]);
     }
     public function add(Request $request){
         return view('sell.create');
