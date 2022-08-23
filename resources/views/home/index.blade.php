@@ -11,7 +11,7 @@
 <hr>
 <div class="item-box">
     @foreach ($items as $item)
-    <a class="item" href="{{route('items.index'['post_id'=>$post_id])}}">
+    <a class="item" href="{{route('items.index',['item_id'=>$item_id])}}">
     <img src="{{asset('/storage/sample/PfsWCOr5XJzjBowpV4zTyO97SVYdZE6m8FoyYrKt.png')}}" width="200px"  alt="">
     <p>{{$item->name}}</p>
     {{-- <p>{{$item->description}}</p> --}}
