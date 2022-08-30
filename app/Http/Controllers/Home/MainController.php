@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Item;
 
 
 class MainController extends Controller
@@ -28,10 +29,10 @@ class MainController extends Controller
         $items = DB::select('select * from users');
         return view('account.mypage',['items'=>$items]);
     }
-    public function item(Request $request, int $item_id){
-        $post = Item::find($item_id);
+    public function item(Request $request, int $post_id){
+        $post = Item::find($post_id);
         $items = Item::all();
-        return view('items.index',['post'=>$post,'item_id'=>$item_id,'items'=>$items]);
+        return view('items.index',['post'=>$post,'post_id'=>$post_id,'items'=>$items]);
     }
     public function add(Request $request){
         return view('sell.create');
