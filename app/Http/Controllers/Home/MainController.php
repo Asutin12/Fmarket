@@ -32,7 +32,6 @@ class MainController extends Controller
     public function item(Request $request, int $item_id){
         $post = Item::find($item_id);
         $items = Item::all();
-        
         return view('items.index',['post'=>$post,'item_id'=>$item_id,'items'=>$items]);
     }
     public function add(Request $request){
