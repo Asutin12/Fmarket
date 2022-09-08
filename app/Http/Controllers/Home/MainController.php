@@ -11,7 +11,7 @@ use App\Models\Item;
 
 class MainController extends Controller
 {
-    public function home(){
+    public function home(Request $request){
         $items = DB::select('select * from items');
         return view('home.index',['items'=>$items]);
     }
@@ -29,10 +29,11 @@ class MainController extends Controller
         $items = DB::select('select * from users');
         return view('account.mypage',['items'=>$items]);
     }
-    public function item(Request $request, int $item_id){
-        $post = Item::find($item_id);
-        $items = Item::all();
-        return view('items.index',['post'=>$post,'item_id'=>$item_id,'items'=>$items]);
+
+
+    public function show(Request $request, int $item_id){
+        $item = Item::find($item_id);
+        return view('items.index',['item'=>$item,'item_id'=>$item_id]);
     }
     public function add(Request $request){
         return view('sell.create');
