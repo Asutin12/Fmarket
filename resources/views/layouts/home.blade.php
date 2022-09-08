@@ -33,8 +33,8 @@
 
         .detail{display: flex;justify-content: space-around}
         .detail-img{width: 600px;height: 600px;}
-        .rigth{width: 400px;}
-        .purchase{background-color: red;color: #fff;width: 100%;display: inline-block;text-align: center;}
+        .rigth{width: 500px;}
+        .purchase{background-color: red;color: #fff;width: 92%;display: inline-block;text-align: center;}
         .price{color: red; font-weight: bold;font-size: 25px;}
     </style>
 </head>
