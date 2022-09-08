@@ -30,6 +30,12 @@
         .section-title{text-align: left;}
         .item-box{width: 100%; display: flex;justify-content: flex-start;flex-wrap: wrap}
         .item{margin-right: 10px;}
+
+        .detail{display: flex;justify-content: space-around}
+        .detail-img{width: 600px;height: 600px;}
+        .rigth{width: 400px;}
+        .purchase{background-color: red;color: #fff;width: 100%;display: inline-block;text-align: center;}
+        .price{color: red; font-weight: bold;font-size: 25px;}
     </style>
 </head>
 <body>
