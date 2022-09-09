@@ -35,7 +35,8 @@
             <p></p>
         </div>
         <hr>
-        <h3 class="user">{{$item->user->name}}</h3>
+        <h3 class="user">出品者</h3>
+        <a href="">{{$item->user->name}}</a>
     </div>
   </div>
 @endsection
