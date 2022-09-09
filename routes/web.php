@@ -17,18 +17,18 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::get('sell','App\Http\Controllers\Home\MainController@sell')->name('sell.home');
-Route::get('main','App\Http\Controllers\Home\MainController@home')->name('home.index');
-Route::post('main','App\Http\Controllers\Home\MainController@home')->name('home.index');
-Route::get('mylist','App\Http\Controllers\Home\MainController@mylist')->name('home.mylist');
-Route::get('account','App\Http\Controllers\Home\MainController@index')->name('account.mypage');
-Route::post('account','App\Http\Controllers\Home\MainController@post');
+Route::get('sell','App\Http\Controllers\Home\HomeController@sell')->name('sell.home');
+Route::get('main','App\Http\Controllers\Home\HomeController@home')->name('home.index');
+Route::post('main','App\Http\Controllers\Home\HomeController@home')->name('home.index');
+Route::get('mylist','App\Http\Controllers\Home\HomeController@mylist')->name('home.mylist');
+Route::get('account','App\Http\Controllers\Home\HomeController@index')->name('account.mypage');
+Route::post('account','App\Http\Controllers\Home\HomeController@post');
 
-Route::get('item/{item_id}','App\Http\Controllers\Home\MainController@show')->name('items.index');
+Route::get('item/{item_id}','App\Http\Controllers\Home\HomeController@show')->name('items.index');
 
 
-Route::get('create','App\Http\Controllers\Home\MainController@add')->name('sell.create');
-Route::post('create','App\Http\Controllers\Home\MainController@create');
+Route::get('create','App\Http\Controllers\Home\HomeController@add')->name('sell.create');
+Route::post('create','App\Http\Controllers\Home\HomeController@create');
 Route::get('drafts','App\Http\Controllers\Sell\SellController@drafts')->name('sell.drafts');
 
 

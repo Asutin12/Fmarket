@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\Item;
 
 
-class MainController extends Controller
+class HomeController extends Controller
 {
     public function home(Request $request){
         $items = DB::select('select * from items');
