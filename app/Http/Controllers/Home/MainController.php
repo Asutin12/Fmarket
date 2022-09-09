@@ -39,15 +39,22 @@ class MainController extends Controller
         return view('sell.create');
     }
     public function create(Request $request){
-        $dir = 'sample';
-        $request->file('image')->store('public/' . $dir);
+        // $dir = 'sample';
+        // $request->file('image')->store('public/' . $dir);
         // $image = 'storage/' . $dir . '/' . $file_name;
+        $image = $request->file('image');
+        if ($request->hasFile('image')){
+            $path = \Storage::put('public/' , $image);
+            $path = explode('/', $path);
+        }else{
+            $path = null;
+        }
         $item = [
             'id'=>$request->id,
             'name'=>$request->name,
             'description'=>$request->description,
             'price'=>$request->price,
-            'image'=>$request->image,
+            'image'=>$path[1],
             'delivaryCharge'=>$request->delivaryCharge,
             'delivaryMethod'=>$request->delivaryMethod,
             'delivaryArea'=>$request->delivaryArea,

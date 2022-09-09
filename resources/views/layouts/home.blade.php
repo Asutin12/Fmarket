@@ -36,6 +36,7 @@
         .rigth{width: 500px;}
         .purchase{background-color: red;color: #fff;width: 92%;display: inline-block;text-align: center;}
         .price{color: red; font-weight: bold;font-size: 25px;}
+        .section{padding-bottom: 5px; padding-top: 5px;}
     </style>
 </head>
 <body>

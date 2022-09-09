@@ -4,7 +4,7 @@
 <a href="{{route('home.index')}}"><</a>
   <div class="detail">
     <div class="left">
-      <img class="detail-img" src="{{asset('/storage/sample/PfsWCOr5XJzjBowpV4zTyO97SVYdZE6m8FoyYrKt.png')}}" width="200px"  alt="">
+      <img class="detail-img" src="{{ '/storage/' . $item['image']}}" width="200px"  alt="">
     </div>
     <div class="rigth">
         <h1 class="name">{{$item->name}}</h1>
