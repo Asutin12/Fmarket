@@ -12,7 +12,7 @@
 <div class="item-box">
     @foreach ($items as $item)
     <a class="item" href="{{route('items.index',['item_id'=>$item->id])}}">
-    <img src="{{asset('/storage/sample/PfsWCOr5XJzjBowpV4zTyO97SVYdZE6m8FoyYrKt.png')}}" width="200px"  alt="">
+    <img src="{{ '/storage/' . $item->image}}" width="200px"  alt="">
     <p>{{$item->name}}</p>
     <p>¥{{$item->price}}</p>
     </a>
