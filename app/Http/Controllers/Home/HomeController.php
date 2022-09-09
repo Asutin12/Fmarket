@@ -46,9 +46,11 @@ class HomeController extends Controller
         }else{
             $path = null;
         }
+        $user_id = Auth::id();
         $item = [
             'id'=>$request->id,
             'name'=>$request->name,
+            'user_id'=>$user_id,
             'description'=>$request->description,
             'price'=>$request->price,
             'image'=>$path[2],

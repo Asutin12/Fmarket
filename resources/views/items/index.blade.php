@@ -35,6 +35,7 @@
             <p></p>
         </div>
         <hr>
+        <h3 class="user">{{$item->user->name}}</h3>
     </div>
   </div>
 @endsection
