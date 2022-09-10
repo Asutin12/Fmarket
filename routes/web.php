@@ -31,6 +31,8 @@ Route::get('create','App\Http\Controllers\Home\HomeController@add')->name('sell.
 Route::post('create','App\Http\Controllers\Home\HomeController@create');
 Route::get('drafts','App\Http\Controllers\Sell\SellController@drafts')->name('sell.drafts');
 
+Route::get('account/edit','App\Http\Controllers\Account\AccountController@add')->name('account.edit');
+
 
 Auth::routes();
 

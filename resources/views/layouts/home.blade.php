@@ -37,6 +37,14 @@
         .purchase{background-color: red;color: #fff;width: 92%;display: inline-block;text-align: center;}
         .price{color: red; font-weight: bold;font-size: 25px;}
         .section{padding-bottom: 5px; padding-top: 5px;}
+
+        /* Account */
+        .user-edit{border:1px solid red; color: red;border-radius: 7px;}
+        .account{width: 600px;margin-left: 300px;}
+        .account-img{padding-right: 10px;}
+        .account-menu{display: flex;align-items: center;}
+        .user-box{text-align: right; display: flex; justify-content: space-between; align-items: center;}
+        .user-item{padding-right: 100px;}
     </style>
 </head>
 <body>
