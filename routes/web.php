@@ -21,8 +21,8 @@ Route::get('sell','App\Http\Controllers\Home\HomeController@sell')->name('sell.h
 Route::get('main','App\Http\Controllers\Home\HomeController@home')->name('home.index');
 Route::post('main','App\Http\Controllers\Home\HomeController@home')->name('home.index');
 Route::get('mylist','App\Http\Controllers\Home\HomeController@mylist')->name('home.mylist');
-Route::get('account','App\Http\Controllers\Home\HomeController@index')->name('account.mypage');
-Route::post('account','App\Http\Controllers\Home\HomeController@post');
+Route::get('user/profile','App\Http\Controllers\Home\HomeController@index')->name('account.mypage');
+Route::post('user/profile','App\Http\Controllers\Home\HomeController@post');
 
 Route::get('item/{item_id}','App\Http\Controllers\Home\HomeController@show')->name('items.index');
 
