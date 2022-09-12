@@ -23,6 +23,7 @@ Route::post('main','App\Http\Controllers\Home\HomeController@home')->name('home.
 Route::get('mylist','App\Http\Controllers\Home\HomeController@mylist')->name('home.mylist');
 Route::get('user/profile','App\Http\Controllers\Home\HomeController@index')->name('account.mypage');
 Route::post('user/profile','App\Http\Controllers\Home\HomeController@post');
+Route::get('user/profile/{user_id}','App\Http\Controllers\Home\HomeController@user')->name('user.profile');
 
 Route::get('item/{item_id}','App\Http\Controllers\Home\HomeController@show')->name('items.index');
 

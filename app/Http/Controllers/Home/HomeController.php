@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Item;
+use App\Models\User;
 
 
 class HomeController extends Controller
@@ -62,5 +63,10 @@ class HomeController extends Controller
         DB::table('items')->insert($item);
         // dd($item);
         return redirect('main');
+    }
+
+    public function user(Request $request, int $user_id){
+        $user = User::find($user_id);
+        return view('account.profile',['user_id'=>$user_id,'user'=>$user]);
     }
 }

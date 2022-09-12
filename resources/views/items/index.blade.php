@@ -37,7 +37,7 @@
         <hr>
         <h3 class="user">出品者</h3>
         <hr>
-        <a href="">{{$item->user->name}}</a>
+        <a href="{{route('user.profile',['user_id'=>$item->user->id])}}">{{$item->user->name}}</a>
         <hr>
     </div>
   </div>
