@@ -24,7 +24,7 @@
         .sell{display: flex;justify-content: space-between; margin: 0 auto; text-align: center;}
         .sell-item{border: 1px solid #b4c1d1;border-radius:7px; padding:50px 100px;width: 150px;}
         footer{background-color: pink;}
-        .footer{width: 50%;height: 400px;display: flex;justify-content: space-between;text-align: left;}
+        .footer{width: 50%;height: 400px;display: flex;justify-content: space-between;text-align: left;margin-top: 200px;}
         .footer-buttom{padding: 20px;}
     </style>
 </head>

@@ -19,7 +19,7 @@
         textarea{width: 100%;height: 200px;padding: 10px;margin-top: 10px;}
         button{background-color: #ffeeff; color: rgb(21, 1, 18);width: 80%;padding: 10px;border-radius: 5px;margin-bottom: 20px;}
         footer{background-color: pink;}
-        .footer{width: 50%;height: 400px;display: flex;justify-content: space-between;text-align: left;}
+        .footer{width: 50%;height: 400px;display: flex;justify-content: space-between;text-align: left;margin-top: 200px;}
         .footer-buttom{padding: 20px;}
     </style>
 </head>
