@@ -64,9 +64,4 @@ class HomeController extends Controller
         // dd($item);
         return redirect('main');
     }
-
-    public function user(Request $request, int $user_id){
-        $user = User::find($user_id);
-        return view('account.profile',['user_id'=>$user_id,'user'=>$user]);
-    }
 }
