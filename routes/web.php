@@ -18,8 +18,8 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('sell','App\Http\Controllers\Home\HomeController@sell')->name('sell.home');
-Route::get('main','App\Http\Controllers\Home\HomeController@home')->name('home.index');
-Route::post('main','App\Http\Controllers\Home\HomeController@home')->name('home.index');
+Route::get('home','App\Http\Controllers\Home\HomeController@home')->name('home.index');
+Route::post('home','App\Http\Controllers\Home\HomeController@home')->name('home.index');
 Route::get('mylist','App\Http\Controllers\Home\HomeController@mylist')->name('home.mylist');
 Route::get('mypage','App\Http\Controllers\Home\HomeController@index')->name('account.mypage');
 Route::post('mypage','App\Http\Controllers\Home\HomeController@post');
