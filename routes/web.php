@@ -25,7 +25,6 @@ Route::get('mypage','App\Http\Controllers\Home\HomeController@index')->name('acc
 Route::post('mypage','App\Http\Controllers\Home\HomeController@post');
 
 
-
 Route::get('item/{item_id}','App\Http\Controllers\Home\HomeController@show')->name('items.index');
 
 
