@@ -26,5 +26,4 @@
 </div>
 <hr>
 <div class="section-title">出品した商品</div>
-
 @endsection
