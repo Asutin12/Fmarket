@@ -15,9 +15,6 @@
                     {{-- <p>Birth_day: {{$user->birth_day_yy . '年' . $user->birth_day_mm . '月' . $user->birth_day_dd . '日'}}</p> --}}
                 </div>
                 </a>
-            <div class="user-item">
-                <a class="user-edit" href="{{route('account.edit')}}">ユーザー編集</a>
-            </div>
             @else
             <p>※ログインしていません(<a href="/login">ログイン</a>|<a href="/register">会員登録</a>)</p>
             @endif

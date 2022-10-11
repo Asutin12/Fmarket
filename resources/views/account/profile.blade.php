@@ -3,6 +3,13 @@
 @section('content')
 <h1>profileページ</h1>
 <p>{{$user->name}}</p>
+@if ($auth_id == $user->id)
+<div class="user-item">
+    <a class="user-edit" href="{{route('account.edit')}}">ユーザー編集</a>
+</div>
+@else
+<p>フォロー</p>
+@endif
 <hr>
 <div class="item-box">
     @foreach ($user->item as $item)
