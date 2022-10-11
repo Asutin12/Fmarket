@@ -9,7 +9,11 @@
     <div class="rigth">
         <h1 class="name">{{$item->name}}</h1>
         <p class="price">¥{{$item->price}}</p>
+        @if ($user_id == $item->user->id)
+        <a href="" class="purchase">編集</a>
+        @else
         <a href="" class="purchase">購入手続きへ</a>
+        @endif
       <h3 class="secttion-title">商品説明</h3>
         <p>{{$item->description}}</p>
       <h3 class="secttion-title">商品の情報</h3>
