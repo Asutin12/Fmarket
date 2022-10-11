@@ -63,6 +63,5 @@ class HomeController extends Controller
         DB::table('items')->insert($item);
         // dd($item);
         return redirect('home');
-        
     }
 }
