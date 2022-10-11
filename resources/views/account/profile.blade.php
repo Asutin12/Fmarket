@@ -3,6 +3,7 @@
 @section('content')
 <h1>profileページ</h1>
 <p>{{$user->name}}</p>
+{{-- <p>{{$user->item->price}}</p> --}}
 <hr>
 
 {{-- <a class="item" href="{{route('items.index',['item_id'=>$item->id])}}">
