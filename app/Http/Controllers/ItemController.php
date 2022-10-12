@@ -15,4 +15,9 @@ class ItemController extends Controller
         $item = Item::find($item_id);
         return view('items.index',['item'=>$item,'item_id'=>$item_id,'user_id'=>$user_id]);
     }
+
+    public function edit(Request $request,int $item_id){
+        $item = Item::find($item_id);
+        return view('items.edit',['item_id'=>$item_id,'item'=>$item]);
+    }
 }

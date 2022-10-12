@@ -10,7 +10,7 @@
         <h1 class="name">{{$item->name}}</h1>
         <p class="price">¥{{$item->price}}</p>
         @if ($user_id == $item->user->id)
-        <a href="" class="purchase">編集</a>
+        <a href="{{route('items.edit',['item_id'=>$item_id])}}" class="purchase">編集</a>
         @else
         <a href="" class="purchase">購入手続きへ</a>
         @endif

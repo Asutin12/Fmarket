@@ -26,6 +26,7 @@ Route::post('mypage','App\Http\Controllers\Home\HomeController@post');
 
 
 Route::get('item/{item_id}','App\Http\Controllers\ItemController@index')->name('items.index');
+Route::get('item/edit/{item_id}','App\Http\Controllers\ItemController@edit')->name('items.edit');
 
 
 Route::get('create','App\Http\Controllers\Home\HomeController@add')->name('sell.create');
