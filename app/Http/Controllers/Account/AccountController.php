@@ -18,6 +18,9 @@ class AccountController extends Controller
         $user = User::find($user_id);
         return view('account.edit',['user'=>$user,'user_id'=>$user_id]);
     }
+    public function update(Request $request){
+
+    }
     public function show(Request $request, int $user_id){
         $auth_id = Auth::id();
         $user = User::find($user_id);
