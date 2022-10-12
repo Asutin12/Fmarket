@@ -30,11 +30,11 @@ Route::get('item/{item_id}','App\Http\Controllers\ItemController@index')->name('
 
 Route::get('create','App\Http\Controllers\Home\HomeController@add')->name('sell.create');
 Route::post('create','App\Http\Controllers\Home\HomeController@create');
-Route::get('drafts','App\Http\Controllers\Sell\SellController@drafts')->name('sell.drafts');
+Route::get('drafts','App\Http\Controllers\SellController@drafts')->name('sell.drafts');
 
-Route::get('profile/edit/{user_id}','App\Http\Controllers\Account\AccountController@add')->name('profile.edit');
-Route::post('profile/edit/{user_id}','App\Http\Controllers\Account\AccountController@update')->name('profile.edit');
-Route::get('profile/{user_id}','App\Http\Controllers\Account\AccountController@show')->name('user.profile');
+Route::get('profile/edit/{user_id}','App\Http\Controllers\AccountController@add')->name('profile.edit');
+Route::post('profile/edit/{user_id}','App\Http\Controllers\AccountController@update')->name('profile.edit');
+Route::get('profile/{user_id}','App\Http\Controllers\AccountController@show')->name('user.profile');
 
 
 Auth::routes();
