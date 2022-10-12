@@ -14,9 +14,9 @@ class AccountController extends Controller
     public function add(Request $request){
         return view('account.edit');
     }
-    public function edit(Request $request){
-        $user = User::find($id);
-        return view('account.edit',['user'=>$user]);
+    public function edit(Request $request ,int $user_id ){
+        $user = User::find($user_id);
+        return view('account.edit',['user'=>$user,'user_id'=>$user_id]);
     }
     public function show(Request $request, int $user_id){
         $auth_id = Auth::id();

@@ -32,8 +32,8 @@ Route::get('create','App\Http\Controllers\Home\HomeController@add')->name('sell.
 Route::post('create','App\Http\Controllers\Home\HomeController@create');
 Route::get('drafts','App\Http\Controllers\Sell\SellController@drafts')->name('sell.drafts');
 
-Route::get('account/edit','App\Http\Controllers\Account\AccountController@add')->name('account.edit');
-Route::get('user/profile/{user_id}','App\Http\Controllers\Account\AccountController@show')->name('user.profile');
+Route::get('profile/edit/{user_id}','App\Http\Controllers\Account\AccountController@add')->name('profile.edit');
+Route::get('profile/{user_id}','App\Http\Controllers\Account\AccountController@show')->name('user.profile');
 
 
 Auth::routes();
