@@ -12,7 +12,7 @@
 
             <h3>プロフィール設定</h3>
             <p>{{$user->name}}</p>
-            <form action="">
+            <form method="post" action="{{route('profile.edit',$user)}}">
                 @csrf
                 <div class="row mb-3">
                     <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('ニックネーム') }}</label>
@@ -25,6 +25,13 @@
                                 <strong>{{ $message }}</strong>
                             </span>
                         @enderror
+                    </div>
+                </div>
+                <div class="row mb-0">
+                    <div class="col-md-6 offset-md-4">
+                        <button type="submit" class="btn btn-primary">
+                            {{ __('更新') }}
+                        </button>
                     </div>
                 </div>
             </form>
