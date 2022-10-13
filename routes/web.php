@@ -33,7 +33,7 @@ Route::get('create','App\Http\Controllers\Home\HomeController@add')->name('sell.
 Route::post('create','App\Http\Controllers\Home\HomeController@create');
 Route::get('drafts','App\Http\Controllers\SellController@drafts')->name('sell.drafts');
 
-Route::get('profile/edit/{user_id}','App\Http\Controllers\AccountController@add')->name('profile.edit');
+Route::get('profile/edit/{user_id}','App\Http\Controllers\AccountController@edit')->name('profile.edit');
 Route::post('profile/edit/{user_id}','App\Http\Controllers\AccountController@update')->name('profile.edit');
 Route::get('profile/{user_id}','App\Http\Controllers\AccountController@show')->name('user.profile');
 

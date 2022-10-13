@@ -11,7 +11,7 @@
             @endif  --}}
 
             <h3>プロフィール設定</h3>
-            <p>{{$user->id}}</p>
+            <p>{{$user->name}}</p>
             <form action="">
                 @csrf
                 <div class="row mb-3">

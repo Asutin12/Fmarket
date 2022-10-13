@@ -5,7 +5,7 @@
 <p>{{$user->name}}</p>
 @if ($auth_id == $user->id)
 <div class="user-item">
-    <a class="user-edit" href="{{route('profile.edit',['user_id'=>$user_id])}}">ユーザー編集</a>
+    <a class="user-edit" href="{{route('profile.edit',['user_id'=>$user->id])}}">ユーザー編集</a>
 </div>
 @else
 <p>フォロー</p>
