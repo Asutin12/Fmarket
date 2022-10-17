@@ -29,8 +29,8 @@ Route::get('item/{item_id}','App\Http\Controllers\ItemController@index')->name('
 Route::get('item/edit/{item_id}','App\Http\Controllers\ItemController@edit')->name('items.edit');
 
 
-Route::get('create','App\Http\Controllers\Home\HomeController@add')->name('sell.create');
-Route::post('create','App\Http\Controllers\Home\HomeController@create');
+Route::get('create','App\Http\Controllers\SellController@add')->name('sell.create');
+Route::post('create','App\Http\Controllers\SellController@create');
 Route::get('drafts','App\Http\Controllers\SellController@drafts')->name('sell.drafts');
 
 Route::get('profile/edit/{user_id}','App\Http\Controllers\AccountController@edit')->name('profile.edit');
