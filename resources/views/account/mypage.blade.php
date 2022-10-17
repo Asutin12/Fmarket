@@ -5,7 +5,7 @@
 <div class="account">
     <div class="account-menu">
         <div class="account-img">
-           <h1>画像</h1>
+            <img src="{{ '/storage/' . $user->image}}" width="100px"  alt="">
         </div>
         <div class="user-box">
             <div class="user-item">
