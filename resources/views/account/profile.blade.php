@@ -3,6 +3,7 @@
 @section('content')
 <h1>profileページ</h1>
 <p>{{$user->name}}</p>
+<p>{{$user->introduction}}</p>
 @if ($auth_id == $user->id)
 <div class="user-item">
     <a class="user-edit" href="{{route('profile.edit',['user_id'=>$user->id])}}">ユーザー編集</a>
