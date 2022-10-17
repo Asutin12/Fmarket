@@ -44,7 +44,7 @@
                     <label for="introduction" class="col-md-4 col-form-label text-md-end">{{ __('自己紹介文') }}</label>
 
                     <div class="col-md-6">
-                        <textarea id="introduction" type="text" class="form-control @error('introduction') is-invalid @enderror" name="introduction" value="{{$user->introduction}}" required autocomplete="introduction" autofocus></textarea>
+                        <textarea id="introduction" type="text" class="form-control @error('introduction') is-invalid @enderror" name="introduction" value="{{old('introduction')}}" required autocomplete="introduction" autofocus>{{$user->introduction}}</textarea>
 
                         @error('introduction')
                             <span class="invalid-feedback" role="alert">
