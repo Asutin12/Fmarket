@@ -25,16 +25,16 @@ class AccountController extends Controller
             $path = null;
         }
         $user = User::find($user_id);
-        $item = [
-            'name'=>$request->name,
-            'introduction'=>$request->introduction,
-            'image'=>$path[2],
-        ];
-        DB::table('users')->update($item);
-        // $user->name = $request->input('name');
-        // $user->introduction = $request->input('introduction');
-        // $user->save();
-        return redirect()->route('user.profile',['user'=>$user,'user_id'=>$user_id,'image'=>$image,'item'=>$item]);
+        // $item = [
+        //     'name'=>$request->name,
+        //     'introduction'=>$request->introduction,
+        //     'image'=>$path[2],
+        // ];
+        $user->name = $request->input('name');
+        $user->introduction = $request->input('introduction');
+        $user->image = $path[2];
+        $user->save();
+        return redirect()->route('user.profile',['user'=>$user,'user_id'=>$user_id,'image'=>$image]);
     }
     public function show(Request $request, int $user_id){
         $auth_id = Auth::id();

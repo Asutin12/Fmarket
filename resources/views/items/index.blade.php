@@ -41,6 +41,7 @@
         <hr>
         <h3 class="user">出品者</h3>
         <hr>
+        <img src="{{ '/storage/' . $item->user->image}}" width="100px"  alt="">
         <a href="{{route('user.profile',['user_id'=>$item->user->id])}}">{{$item->user->name}}</a>
         <hr>
     </div>

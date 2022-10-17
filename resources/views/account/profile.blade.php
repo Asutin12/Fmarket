@@ -2,6 +2,7 @@
 
 @section('content')
 <h1>profileページ</h1>
+<img src="{{ '/storage/' . $user->image}}" width="100px"  alt="">
 <p>{{$user->name}}</p>
 <p>{{$user->introduction}}</p>
 @if ($auth_id == $user->id)
