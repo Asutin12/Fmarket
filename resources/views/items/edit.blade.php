@@ -3,7 +3,7 @@
 @section('title','商品の出品')
 
 @section('content')
-<form method="post" action="{{route('sell.create')}}" enctype="multipart/form-data" class="listing">
+<form method="post" action="{{route('items.edit',$item)}}" enctype="multipart/form-data" class="listing">
     @csrf
     <h1 class="title">商品の編集</h1>
     <section>
@@ -11,7 +11,7 @@
             <label for="image" class="col-md-4 col-form-label text-md-end">{{ __('出品画像') }}</label>
 
             <div class="col-md-6">
-                <input id="image" type="file" class="form-control @error('image') is-invalid @enderror" name="image" value="{{ old('image') }}" required autocomplete="image" autofocus>
+                <input id="image" type="file" class="form-control @error('image') is-invalid @enderror" name="image" value="{{old('image')}}" required autocomplete="image" autofocus>
 
                 @error('image')
                     <span class="invalid-feedback" role="alert">
@@ -175,7 +175,7 @@
     </section>
 </form>
 <section>
-    <form method="post" action="{{route('item.delete',$item_id)}}">
+    <form method="post" action="{{route('items.delete',$item->id)}}">
         @csrf
         @method('delete')
         <div class="mb-0">
@@ -187,6 +187,5 @@
         </div>
     </form>
 </section>
-
 @endsection
 

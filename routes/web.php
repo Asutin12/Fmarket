@@ -27,7 +27,8 @@ Route::post('mypage','App\Http\Controllers\Home\HomeController@post');
 
 Route::get('item/{item_id}','App\Http\Controllers\ItemController@index')->name('items.index');
 Route::get('item/edit/{item_id}','App\Http\Controllers\ItemController@edit')->name('items.edit');
-Route::get('item/delete/{item_id}','App\Http\Controllers\ItemController@delete')->name('item.delete');
+Route::post('item/edit/{item_id}','App\Http\Controllers\ItemController@update')->name('items.edit');
+Route::post('item/delete/{item_id}','App\Http\Controllers\ItemController@delete')->name('items.delete');
 
 
 Route::get('create','App\Http\Controllers\SellController@add')->name('sell.create');

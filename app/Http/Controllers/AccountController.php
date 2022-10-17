@@ -16,6 +16,7 @@ class AccountController extends Controller
         $user = User::find($user_id);
         return view('account.edit',['user'=>$user,'user_id'=>$user_id]);
     }
+    // 編集機能
     public function update(Request $request, int $user_id){
         $image = $request->file('image');
         if ($request->hasFile('image')){
@@ -25,11 +26,6 @@ class AccountController extends Controller
             $path = null;
         }
         $user = User::find($user_id);
-        // $item = [
-        //     'name'=>$request->name,
-        //     'introduction'=>$request->introduction,
-        //     'image'=>$path[2],
-        // ];
         $user->name = $request->input('name');
         $user->introduction = $request->input('introduction');
         $user->image = $path[2];
