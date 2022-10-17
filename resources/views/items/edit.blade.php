@@ -175,7 +175,7 @@
     </section>
 </form>
 <section>
-    <form method="post" action="{{route('items.delete',$item->id)}}">
+    <form method="post" action="{{route('items.delete',$item)}}">
         @csrf
         @method('delete')
         <div class="mb-0">

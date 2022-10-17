@@ -28,7 +28,7 @@ Route::post('mypage','App\Http\Controllers\Home\HomeController@post');
 Route::get('item/{item_id}','App\Http\Controllers\ItemController@index')->name('items.index');
 Route::get('item/edit/{item_id}','App\Http\Controllers\ItemController@edit')->name('items.edit');
 Route::post('item/edit/{item_id}','App\Http\Controllers\ItemController@update')->name('items.edit');
-Route::post('item/delete/{item_id}','App\Http\Controllers\ItemController@delete')->name('items.delete');
+Route::delete('item/delete/{item_id}','App\Http\Controllers\ItemController@delete')->name('items.delete');
 
 
 Route::get('create','App\Http\Controllers\SellController@add')->name('sell.create');
@@ -38,6 +38,8 @@ Route::get('drafts','App\Http\Controllers\SellController@drafts')->name('sell.dr
 Route::get('profile/edit/{user_id}','App\Http\Controllers\AccountController@edit')->name('profile.edit');
 Route::post('profile/edit/{user_id}','App\Http\Controllers\AccountController@update')->name('profile.edit');
 Route::get('profile/{user_id}','App\Http\Controllers\AccountController@show')->name('user.profile');
+
+Route::get('purchase/{item_id}',);
 
 
 Auth::routes();

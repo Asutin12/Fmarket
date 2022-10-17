@@ -38,8 +38,10 @@ class ItemController extends Controller
     }
     // 削除機能
     public function delete(Request $request , int $item_id){
+        $user_id = Auth::id();
         $item = Item::find($item_id);
         $item->delete();
-        return redirect()->route('user.profile',['item'=>$item]);
+        return redirect()->route('user.profile',['item'=>$item,'user_id'=>$user_id]);
+        // 'item_id'=>$item_id,'user_id'=>$user_id user.profile
     }
 }
