@@ -12,6 +12,17 @@
         @if ($user_id == $item->user->id)
         <a href="{{route('items.edit',['item_id'=>$item_id])}}" class="purchase">編集</a>
         @else
+        <div class="">
+            @if ($item->is_liked_by_auth_user())
+            <a href="{{route('item.unlike',['item_id'=>$item_id])}}">いいね<span>
+                {{$item->likes->count()}}
+            </span></a>
+            @else
+            <a href="{{route('item.like',['item_id'=>$item_id])}}">いいね<span>
+                {{$item->likes->count()}}
+            </span></a>
+            @endif
+        </div>
         <a href="" class="purchase">購入手続きへ</a>
         @endif
       <h3 class="secttion-title">商品説明</h3>

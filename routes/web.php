@@ -30,8 +30,8 @@ Route::get('item/edit/{item_id}','App\Http\Controllers\ItemController@edit')->na
 Route::post('item/edit/{item_id}','App\Http\Controllers\ItemController@update')->name('items.edit');
 Route::delete('item/delete/{item_id}','App\Http\Controllers\ItemController@delete')->name('items.delete');
 
-Route::get('item/like/{id}', 'App\Http\Controllers\ItemController@like')->name('item.like');
-Route::get('item/unlike/{id}', 'App\Http\Controllers\ItemController@unlike')->name('item.unlike');
+Route::get('item/like/{item_id}', 'App\Http\Controllers\ItemController@like')->name('item.like');
+Route::get('item/unlike/{item_id}', 'App\Http\Controllers\ItemController@unlike')->name('item.unlike');
 
 
 Route::get('create','App\Http\Controllers\SellController@add')->name('sell.create');

@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Item;
 use App\Models\User;
+use App\Models\Like;
 
 class ItemController extends Controller
 {
@@ -15,6 +16,22 @@ class ItemController extends Controller
         $item = Item::find($item_id);
         return view('items.index',['item'=>$item,'item_id'=>$item_id,'user_id'=>$user_id]);
     }
+    // いいね機能
+    public function __construct(){
+        $this->middleware(['auth','verified'])->only(['like','unlike']);
+    }
+    public function like(Request $request, int $item_id){
+        Like::create(['item_id'=>$item_id,'user_id'=>Auth::id(),]);
+        session()->flash('success','You Like the item.');
+        return redirect()->back();
+    }
+    public function unlike(Request $request, int $item_id){
+        $like = Like::where('item_id',$item_id)->where('user_id',Auth::id())->first();
+        $like->delete();
+        session()->flash('success','You Unlike the item.');
+        return redirect()->back();
+    }
+
     // 編集機能
     public function edit(Request $request,int $item_id){
         $item = Item::find($item_id);
