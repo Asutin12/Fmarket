@@ -8,19 +8,22 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Item;
 use App\Models\User;
+use App\Models\Like;
 
 
 class HomeController extends Controller
 {
     public function home(Request $request){
+        $user = Auth::user();
         $items = DB::select('select * from items');
-        return view('home.index',['items'=>$items]);
+        return view('home.index',['items'=>$items,'user'=>$user,'like'=>$like]);
     }
     public function sell(Request $request){
         return view('sell.home');
     }
-    public function mylist(Request $request){
-        return view('home.mylist');
+    public function mylist(Request $request, int $user_id){
+        $user = User::find($user_id);
+        return view('home.mylist',['user'=>$user,'user_id'=>$user_id]);
     }
     public function index(Request $request){
         $user = Auth::user();

@@ -2,7 +2,7 @@
 
 @section('detail')
     <a href="{{route('home.index')}}">おすすめ</a>
-    <a href="{{route('home.mylist')}}">マイリスト</a>
+    <a href="{{route('home.mylist',['user_id'=>$user->id])}}">マイリスト</a>
     <a href="">ピックアップ</a>
 @endsection
 
