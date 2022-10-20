@@ -16,7 +16,7 @@ class HomeController extends Controller
     public function home(Request $request){
         $user = Auth::user();
         $items = DB::select('select * from items');
-        return view('home.index',['items'=>$items,'user'=>$user,'like'=>$like]);
+        return view('home.index',['items'=>$items,'user'=>$user]);
     }
     public function sell(Request $request){
         return view('sell.home');
