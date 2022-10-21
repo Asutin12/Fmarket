@@ -9,6 +9,11 @@
 @section('content')
 <section>
     <div class="section-title">保存した検索条件</div>
+    @foreach ($likes as $like)
+    @if ($auth_id = $like->user_id)
+    <p>{{$like->item_id}}</p>
+    @endif
+    @endforeach
     <hr>
 </section>
 <section>

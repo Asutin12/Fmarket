@@ -23,7 +23,8 @@ class HomeController extends Controller
     }
     public function mylist(Request $request, int $user_id){
         $user = User::find($user_id);
-        return view('home.mylist',['user'=>$user,'user_id'=>$user_id]);
+        $likes = DB::select('select * from likes');
+        return view('home.mylist',['user'=>$user,'user_id'=>$user_id,'likes'=>$likes]);
     }
     public function index(Request $request){
         $user = Auth::user();
