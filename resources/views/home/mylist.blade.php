@@ -14,7 +14,6 @@
     <p>{{$like->item_id}}</p>
     @endif
     @endforeach
-    
     <hr>
 </section>
 <section>
