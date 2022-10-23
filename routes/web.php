@@ -24,6 +24,9 @@ Route::get('mylist/{user_id}','App\Http\Controllers\Home\HomeController@mylist')
 Route::get('mypage','App\Http\Controllers\Home\HomeController@index')->name('account.mypage');
 Route::post('mypage','App\Http\Controllers\Home\HomeController@post');
 
+Route::post('search','App\Http\Controllers\Home\HomeController@search')->name('search.index');
+
+
 
 Route::get('item/{item_id}','App\Http\Controllers\ItemController@index')->name('items.index');
 Route::get('item/edit/{item_id}','App\Http\Controllers\ItemController@edit')->name('items.edit');

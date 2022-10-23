@@ -16,7 +16,18 @@ class HomeController extends Controller
     public function home(Request $request){
         $user = Auth::user();
         $items = DB::select('select * from items');
-        return view('home.index',['items'=>$items,'user'=>$user]);
+        $item = Item::paginate(20);
+        $search = $request->input('search');
+        $query = Item::query();
+        if ($search) {
+            $spaceConversion = mb_convert_kana($search, 's');
+            $wordArraySearched = preg_split('/[\s,]+/',$spaceConversion,-1,PLEG_SPLIT_NO_EMPTY);
+            foreach($wordArraySearched as $value) {
+                $query->where('name', 'like', '%'.$value.'%');
+            }
+            $item = $query->paginate(20);
+        }
+        return view('home.index',['items'=>$items,'user'=>$user,'item'=>$item,'search'=>$search]);
     }
     public function sell(Request $request){
         return view('sell.home');
@@ -33,5 +44,9 @@ class HomeController extends Controller
     public function post(Request $request){
         $items = DB::select('select * from users');
         return view('account.mypage',['items'=>$items]);
+    }
+    public function search(Request $request,int $item_id){
+        $item = Item::find($item_id);
+        return view('search.index',['item'=>$item]);
     }
 }

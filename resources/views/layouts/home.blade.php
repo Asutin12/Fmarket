@@ -10,8 +10,8 @@
     <style>
         .header{display: flex;align-items: center;justify-content: space-between;padding:0px 30px;}
         .header-right{display: flex;align-items: center;justify-content: space-between;}
-        .header-left{display: flex;align-items: center;justify-content: space-between; width: 700px;}
-        .search{border: 1px solid gray;padding: 2px 250px;}
+        .header-left{display: flex;align-items: center;justify-content: space-between; width: 800px;}
+        /* .search{border: 1px solid gray;padding: 2px 250px;} */
         .header-list{font-size: 15px; display: flex;align-items: center;width: 500px;justify-content: space-between;text-align: right;}
         .datail{display: flex;padding-left: 200px;}
         a{text-decoration: none;padding:10px 20px;}
@@ -52,7 +52,20 @@
     <div class="header">
         <div class="header-left">
             <a href="{{route('home.index')}}" class="header-title">Title</a>
-            <p class="search">検索機能</p>
+            <div class="search">
+                <form method="get" action="{{route('home.index')}}">
+                    <input type="search" placeholder="" name="seach" value="@if (isset($search)) {{ $search }} @endif">
+                    <div class="">
+                        <button type="submit">検索</button>
+                        <button>
+                            <a href="{{route('home.index')}}" class="teatwhite">クリア</a>
+                        </button>
+                    </div>
+                </form>
+            </div>
+            {{-- @foreach ($items as $item)
+            {{-- <a href="{{route('search.index',['item_id'=>$item->id])}}">{{$item->name}}</a>
+            @endforeach --}}
         </div>
         <div class="header-right">
             <ul class="header-list">
