@@ -60,6 +60,7 @@
                         <button>
                             <a href="{{route('home.index')}}" class="teatwhite">クリア</a>
                         </button>
+                        
                     </div>
                 </form>
             </div>
