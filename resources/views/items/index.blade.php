@@ -37,18 +37,6 @@
             <p>配送料の負担</p>
             <p></p>
         </div>
-        <div class="section">
-            <p>配送の方法</p>
-            <p></p>
-        </div>
-        <div class="section">
-            <p>配送元の地域</p>
-            <p></p>
-        </div>
-        <div class="section">
-            <p>配送までの日数</p>
-            <p></p>
-        </div>
         <hr>
         <h3 class="user">出品者</h3>
         <hr>
