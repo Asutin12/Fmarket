@@ -31,9 +31,6 @@ class SellController extends Controller
             'price'=>$request->price,
             'image'=>$path[2],
             'delivaryCharge'=>$request->delivaryCharge,
-            'delivaryMethod'=>$request->delivaryMethod,
-            'delivaryArea'=>$request->delivaryArea,
-            'delivaryDays'=>$request->delivaryDays,
         ];
         DB::table('items')->insert($item);
         // dd($item);

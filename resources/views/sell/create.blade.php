@@ -95,58 +95,6 @@
                 </select>
             </div>
         </div>
-
-        <div class="row mb-3">
-            <label for="DelivaryMethod" class="col-md-4 col-form-label text-md-end">{{ __('配送の方法') }}</label>
-
-            <div class="col-md-6">
-                <select id="DelivaryMethod" type="text" class="form-control @error('DelivaryMethod') is-invalid @enderror" name="DelivaryMethod" value="{{ old('DelivaryMethod') }}" required autocomplete="DelivaryMethod" autofocus>
-                    <option value="選択する">選択する</option>
-                    <option value="未定">未定</option>
-                    <option value="普通郵便">普通郵便</option>
-                    <option value="クロネコヤマト">クロネコヤマト</option>
-                @error('DelivaryMethod')
-                    <span class="invalid-feedback" role="alert">
-                        <strong>{{ $message }}</strong>
-                    </span>
-                @enderror
-            </select>
-            </div>
-        </div>
-        <div class="row mb-3">
-            <label for="DelivaryArea" class="col-md-4 col-form-label text-md-end">{{ __('発送元の地域') }}</label>
-
-            <div class="col-md-6">
-                <select id="DelivaryArea" type="text" class="form-control @error('DelivaryArea') is-invalid @enderror" name="DelivaryArea" value="{{ old('DelivaryArea') }}" required autocomplete="DelivaryArea" autofocus>
-                    <option value="選択する">選択する</option>
-                    <option value="未定">未定</option>
-                    <option value="普通郵便">普通郵便</option>
-                    <option value="クロネコヤマト">クロネコヤマト</option>
-                @error('DelivaryArea')
-                    <span class="invalid-feedback" role="alert">
-                        <strong>{{ $message }}</strong>
-                    </span>
-                @enderror
-            </select>
-            </div>
-        </div>
-        <div class="row mb-3">
-            <label for="DelivaryDays" class="col-md-4 col-form-label text-md-end">{{ __('発送までの日数') }}</label>
-
-            <div class="col-md-6">
-                <select id="DelivaryDays" type="text" class="form-control @error('DelivaryDays') is-invalid @enderror" name="DelivaryDays" value="{{ old('DelivaryDays') }}" required autocomplete="DelivaryDays" autofocus>
-                    <option value="選択する">選択する</option>
-                    <option value="１〜２日">１〜２日</option>
-                    <option value="２〜４日">２〜４日</option>
-                    <option value="４〜７日">４〜７日</option>
-                @error('DelivaryDays')
-                    <span class="invalid-feedback" role="alert">
-                        <strong>{{ $message }}</strong>
-                    </span>
-                @enderror
-            </select>
-            </div>
-        </div>
     </section>
     <section>
         <div class="section-title">販売価格</div>

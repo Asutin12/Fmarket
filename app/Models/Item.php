@@ -21,9 +21,6 @@ class Item extends Model
         'situation',
         'image',
         'delivaryCharge',
-        'delivaryMethod',
-        'delivaryArea',
-        'delivaryDays',
     ];
 
     public function user(){
