@@ -54,8 +54,8 @@
             <a href="{{route('home.index')}}" class="header-title">Title</a>
             <div class="search">
                 <form method="get" action="{{route('home.index')}}">
-                    <input type="search" placeholder="" name="seach" value="@if (isset($search)) {{ $search }} @endif">
-                    <div class="">
+                    <input type="search" placeholder="" name="search" value="@if (isset($search)) {{ $search }} @endif">
+                    <div>
                         <button type="submit">検索</button>
                         <button>
                             <a href="{{route('home.index')}}" class="teatwhite">クリア</a>
@@ -63,9 +63,6 @@
                     </div>
                 </form>
             </div>
-            {{-- @foreach ($items as $item)
-            {{-- <a href="{{route('search.index',['item_id'=>$item->id])}}">{{$item->name}}</a>
-            @endforeach --}}
         </div>
         <div class="header-right">
             <ul class="header-list">
