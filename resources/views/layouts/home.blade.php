@@ -61,9 +61,6 @@
                     <input class="bb-i" type="search" placeholder="" name="search" value="@if (isset($search)) {{ $search }} @endif">
                     <div>
                         <button type="submit">検索</button>
-                        <button>
-                            <a href="{{route('home.index')}}" class="teatwhite">クリア</a>
-                        </button>
                     </div>
                 </form>
             </div>
