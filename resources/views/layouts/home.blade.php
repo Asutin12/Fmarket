@@ -49,6 +49,9 @@
         /* search */
         .bb{display: flex;}
         .bb-i{margin-right: 10px;width: 200px;}
+
+        /* item.index */
+        .item-section{display: flex;justify-content: space-between;margin-right: 250px;}
     </style>
 </head>
 <body>

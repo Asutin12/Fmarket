@@ -29,11 +29,11 @@
         <p>{{$item->description}}</p>
       <h3 class="secttion-title">商品の情報</h3>
         <hr>
-        <div class="section">
-            <p>商品の情報</p>
+        <div class="item-section">
+            <p>カテゴリー</p>
             <p>{{$item->category_id}}</p>
         </div>
-        <div class="section">
+        <div class="item-section">
             <p>配送料の負担</p>
             <p></p>
         </div>
