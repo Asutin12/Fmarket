@@ -28,7 +28,10 @@
 
             <div class="col-md-6">
                 <select id="category_id" type="text" class="form-control @error('category_id') is-invalid @enderror" name="category_id" value="{{ old('category_id') }}" required autocomplete="category_id" autofocus>
-
+                    <option value="hidden">選択してください</option>
+                    @foreach ($categories as $category)
+                    <option value="{{$category->name}}">{{$category->name}}</option>
+                    @endforeach
                 @error('category_id')
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>

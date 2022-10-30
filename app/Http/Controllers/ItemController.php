@@ -35,7 +35,8 @@ class ItemController extends Controller
     // 編集機能
     public function edit(Request $request,int $item_id){
         $item = Item::find($item_id);
-        return view('items.edit',['item_id'=>$item_id,'item'=>$item]);
+        $categories =DB::select('select * from categories');
+        return view('items.edit',['item_id'=>$item_id,'item'=>$item,'categories'=>$categories]);
     }
     public function update(Request $request, int $item_id){
         $image = $request->file('image');
@@ -50,6 +51,7 @@ class ItemController extends Controller
         $item->name = $request->input('name');
         $item->description = $request->input('description');
         $item->price = $request->input('price');
+        $item->category_id = $request->input('category_id');
         $item->save();
         return redirect()->route('items.index',['item'=>$item,'item_id'=>$item_id,'image'=>$image]);
     }

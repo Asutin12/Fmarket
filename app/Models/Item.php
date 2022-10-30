@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 use App\Models\Like;
+use App\Models\Category;
 
 class Item extends Model
 {
@@ -29,6 +30,9 @@ class Item extends Model
     }
     public function likes(){
         return $this->hasMany(Like::class, 'item_id');
+    }
+    public function category(){
+        return $this->hasMany(Category::class);
     }
 
     public function is_liked_by_auth_user(){

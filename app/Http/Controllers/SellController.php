@@ -8,11 +8,13 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Item;
 use App\Models\User;
+use App\Models\Category;
 
 class SellController extends Controller
 {
     public function add(Request $request){
-        return view('sell.create');
+        $categories =DB::select('select * from categories');
+        return view('sell.create',compact('categories'));
     }
     public function create(Request $request){
         $image = $request->file('image');
@@ -21,7 +23,7 @@ class SellController extends Controller
             $path = explode('/', $path);
         }else{
             $path = null;
-        }
+        };
         $user_id = Auth::id();
         $item = [
             'id'=>$request->id,
@@ -30,7 +32,7 @@ class SellController extends Controller
             'description'=>$request->description,
             'price'=>$request->price,
             'image'=>$path[2],
-            'category'=>$request->category,
+            'category_id'=>$request->category_id,
             'delivaryCharge'=>$request->delivaryCharge,
         ];
         DB::table('items')->insert($item);

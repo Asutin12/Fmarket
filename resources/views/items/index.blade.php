@@ -31,7 +31,7 @@
         <hr>
         <div class="section">
             <p>商品の情報</p>
-            <p></p>
+            <p>{{$item->category_id}}</p>
         </div>
         <div class="section">
             <p>配送料の負担</p>
