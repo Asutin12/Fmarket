@@ -45,6 +45,10 @@
         .account-menu{display: flex;align-items: center;}
         .user-box{text-align: right; display: flex; justify-content: space-between; align-items: center;}
         .user-item{padding-right: 100px;}
+
+        /* search */
+        .bb{display: flex;}
+        .bb-i{margin-right: 10px;width: 200px;}
     </style>
 </head>
 <body>
@@ -53,8 +57,8 @@
         <div class="header-left">
             <a href="{{route('home.index')}}" class="header-title">Title</a>
             <div class="search">
-                <form method="get" action="{{route('home.index')}}">
-                    <input type="search" placeholder="" name="search" value="@if (isset($search)) {{ $search }} @endif">
+                <form class="bb" method="get" action="{{route('home.index')}}">
+                    <input class="bb-i" type="search" placeholder="" name="search" value="@if (isset($search)) {{ $search }} @endif">
                     <div>
                         <button type="submit">検索</button>
                         <button>
