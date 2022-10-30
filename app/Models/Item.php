@@ -20,6 +20,7 @@ class Item extends Model
         'category',
         'situation',
         'image',
+        'category_id',
         'delivaryCharge',
     ];
 

@@ -21,20 +21,22 @@
             </div>
         </div>
     </section>
-    {{-- <section>
+    <section>
         <div class="section-title">商品の詳細</div>
         <div class="row mb-3">
-            <label for="category" class="col-md-4 col-form-label text-md-end">{{ __('カテゴリー') }}</label>
+            <label for="category_id" class="col-md-4 col-form-label text-md-end">{{ __('カテゴリー') }}</label>
 
             <div class="col-md-6">
-                <input id="category" type="text" class="form-control @error('category') is-invalid @enderror" name="category" value="{{ old('category') }}" required autocomplete="category" autofocus>
-                @error('category')
+                <select id="category_id" type="text" class="form-control @error('category_id') is-invalid @enderror" name="category_id" value="{{ old('category_id') }}" required autocomplete="category_id" autofocus>
+
+                @error('category_id')
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
                     </span>
                 @enderror
+                </select>
             </div>
-        </div> --}}
+        </div>
         {{-- <div class="row mb-3">
             <label for="situation" class="col-md-4 col-form-label text-md-end">{{ __('商品の状態') }}</label>
 
@@ -54,8 +56,7 @@
             <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('商品名') }}</label>
 
             <div class="col-md-6">
-                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
-
+                    <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
                 @error('name')
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>

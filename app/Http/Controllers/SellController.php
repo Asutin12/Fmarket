@@ -30,6 +30,7 @@ class SellController extends Controller
             'description'=>$request->description,
             'price'=>$request->price,
             'image'=>$path[2],
+            'category'=>$request->category,
             'delivaryCharge'=>$request->delivaryCharge,
         ];
         DB::table('items')->insert($item);
