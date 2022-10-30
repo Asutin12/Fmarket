@@ -32,7 +32,7 @@ class Item extends Model
         return $this->hasMany(Like::class, 'item_id');
     }
     public function category(){
-        return $this->hasMany(Category::class);
+        return $this->belongsTo(Category::class);
     }
 
     public function is_liked_by_auth_user(){
