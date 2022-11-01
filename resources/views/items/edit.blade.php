@@ -23,38 +23,6 @@
         </div>
     </section>
     <section>
-        <div class="section-title">商品の詳細</div>
-        <div class="row mb-3">
-            <label for="category_id" class="col-md-4 col-form-label text-md-end">{{ __('カテゴリー') }}</label>
-
-            <div class="col-md-6">
-                <select id="category_id" type="text" class="form-control @error('category_id') is-invalid @enderror" name="category_id" value="" required autocomplete="category_id" autofocus>
-                    <option value="hidden">{{$item->category_id}}</option>
-                    @foreach ($categories as $category)
-                    <option value="{{$category->name}}">{{$category->name}}</option>
-                    @endforeach
-                @error('category_id')
-                    <span class="invalid-feedback" role="alert">
-                        <strong>{{ $message }}</strong>
-                    </span>
-                @enderror
-                </select>
-            </div>
-        </div>
-        {{-- <div class="row mb-3">
-            <label for="situation" class="col-md-4 col-form-label text-md-end">{{ __('商品の状態') }}</label>
-
-            <div class="col-md-6">
-                <input id="situation" type="text" class="form-control @error('situation') is-invalid @enderror" name="situation" value="{{ old('situation') }}" required autocomplete="situation" autofocus>
-                @error('situation')
-                    <span class="invalid-feedback" role="alert">
-                        <strong>{{ $message }}</strong>
-                    </span>
-                @enderror
-            </div>
-        </div>
-    </section> --}}
-    <section>
         <div class="section-title">商品名と説明</div>
         <div class="row mb-3">
             <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('商品名') }}</label>
@@ -82,6 +50,38 @@
                 @enderror
             </div>
         </div>
+    </section>
+    <section>
+        <div class="section-title">商品の詳細</div>
+        <div class="row mb-3">
+            <label for="category_id" class="col-md-4 col-form-label text-md-end">{{ __('カテゴリー') }}</label>
+
+            <div class="col-md-6">
+                <select id="category_id" type="text" class="form-control @error('category_id') is-invalid @enderror" name="category_id" value="" required autocomplete="category_id" autofocus>
+                    <option value="{{$item->category_id}}">{{$item->category_id}}</option>
+                    @foreach ($categories as $category)
+                    <option value="{{$category->name}}">{{$category->name}}</option>
+                    @endforeach
+                @error('category_id')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
+                </select>
+            </div>
+        </div>
+        {{-- <div class="row mb-3">
+            <label for="situation" class="col-md-4 col-form-label text-md-end">{{ __('商品の状態') }}</label>
+
+            <div class="col-md-6">
+                <input id="situation" type="text" class="form-control @error('situation') is-invalid @enderror" name="situation" value="{{ old('situation') }}" required autocomplete="situation" autofocus>
+                @error('situation')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
+            </div>
+        </div> --}}
     </section>
     <section>
         <div class="section-title">配送について</div>
