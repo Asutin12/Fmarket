@@ -7,7 +7,7 @@
 
 @section('content')
 <section>
-    <div class="section-title">保存した検索条件</div>
+    <div class="section-title">いいねした商品</div>
     @foreach ($likes as $like)
     @if ($auth_id = $like->user_id)
     <p>{{$like->item_id}}</p>
@@ -15,13 +15,9 @@
     @endforeach
     <hr>
 </section>
-<section>
-    <div class="section-title">あなたの興味のある商品</div>
-    <hr>
-</section>
-<section>
+{{-- <section>
     <div class="section-title">フォロー中のユーザー</div>
     <hr>
-</section>
+</section> --}}
 
 @endsection
