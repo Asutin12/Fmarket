@@ -34,6 +34,9 @@ class Item extends Model
     public function category(){
         return $this->belongsTo(Category::class);
     }
+    public function purchase(){
+        return $this->hasMany(Purchase::class);
+    }
 
     public function is_liked_by_auth_user(){
         $id = Auth::id();
