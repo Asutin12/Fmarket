@@ -9,9 +9,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
     <style>
         .header{display: flex;align-items: center;justify-content: space-between;padding:0px 30px;}
-        .header-right{display: flex;align-items: center;justify-content: space-around;}
-        .header-item{padding-right: 100px;}
-        .header-left{display: flex;align-items: center;justify-content: space-between; width: 700px;}
+        /* .header-right{display: flex;align-items: center;justify-content: space-between;} */
+        .header-left{display: flex;align-items: center;justify-content: space-between; width: 800px;}
         /* .search{border: 1px solid gray;padding: 2px 250px;} */
         .header-list{font-size: 15px; display: flex;align-items: center;width: 500px;justify-content: space-between;text-align: right;}
         .datail{display: flex;padding-left: 200px;}
@@ -72,21 +71,16 @@
             </div>
         </div>
         <div class="header-right">
-            {{-- <ul class="header-list"> --}}
-                @guest
+            <ul class="header-list">
                 <p class="header-item"><a href="{{route('register')}}">会員登録</a></p>
                 <p class="header-item"><a href="{{route('home')}}">ログイン</a></p>
-                @endguest
-            {{-- </ul> --}}
+                <p class="header-item"><a href="{{route('account.mypage')}}">アカウント</a></p>
+                <p class="header-item"><a href="{{route('sell.home')}}">出品</a></p>
+            </ul>
         </div>
     </div>
     <div class="datail">
-        @auth
-        <a href="{{route('home.index')}}">おすすめ</a>
-        <a href="{{route('home.mylist',['user_id'=>$user->id])}}">マイリスト</a>
-        <a href="{{route('account.mypage')}}">アカウント</a>
-        <a href="{{route('sell.home')}}">出品</a>
-        @endauth
+        @yield('detail')
     </div>
 <hr>
 </header>

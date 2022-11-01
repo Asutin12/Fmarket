@@ -34,10 +34,10 @@ class HomeController extends Controller
     public function sell(Request $request){
         return view('sell.home');
     }
-    public function mylist(Request $request, int $user_id){
-        $user = User::find($user_id);
-        $likes = DB::select('select * from likes');
-        return view('home.mylist',['user'=>$user,'user_id'=>$user_id,'likes'=>$likes]);
+    public function mylist(Request $request, $user_id){
+            $user = User::find($user_id);
+            $likes = DB::select('select * from likes');
+            return view('home.mylist',['user'=>$user,'user_id'=>$user_id,'likes'=>$likes]);
     }
     public function index(Request $request){
         $user = Auth::user();
