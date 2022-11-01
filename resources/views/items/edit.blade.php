@@ -11,7 +11,8 @@
             <label for="image" class="col-md-4 col-form-label text-md-end">{{ __('出品画像') }}</label>
 
             <div class="col-md-6">
-                <input id="image" type="file" class="form-control @error('image') is-invalid @enderror" name="image" value="{{old('image')}}" required autocomplete="image" autofocus>
+                <img src="{{ '/storage/' . $item['image']}}" width="100px" alt="">
+                <input id="image" type="file" class="form-control @error('image') is-invalid @enderror" name="image" value="{{$item->image}}" required autocomplete="image" autofocus>
 
                 @error('image')
                     <span class="invalid-feedback" role="alert">
@@ -27,8 +28,8 @@
             <label for="category_id" class="col-md-4 col-form-label text-md-end">{{ __('カテゴリー') }}</label>
 
             <div class="col-md-6">
-                <select id="category_id" type="text" class="form-control @error('category_id') is-invalid @enderror" name="category_id" value="{{ old('category_id') }}" required autocomplete="category_id" autofocus>
-                    <option value="hidden">選択してください</option>
+                <select id="category_id" type="text" class="form-control @error('category_id') is-invalid @enderror" name="category_id" value="" required autocomplete="category_id" autofocus>
+                    <option value="hidden">{{$item->category_id}}</option>
                     @foreach ($categories as $category)
                     <option value="{{$category->name}}">{{$category->name}}</option>
                     @endforeach
@@ -120,7 +121,7 @@
     <section>
         <div class="mb-0">
             <div class="col-md-6 offset-md-4">
-                <button type="submit" class="btn btn-primary">
+                <button class="update" type="submit" class="btn btn-primary">
                     {{ __('更新する') }}
                 </button>
             </div>
@@ -133,7 +134,7 @@
         @method('delete')
         <div class="mb-0">
             <div class="col-md-6 offset-md-4">
-                <button type="submit" class="btn btn-primary">
+                <button class="delete" type="submit" class="btn btn-primary">
                     {{ __('削除する') }}
                 </button>
             </div>
