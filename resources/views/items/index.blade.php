@@ -9,11 +9,11 @@
     <div class="rigth">
         <h1 class="name">{{$item->name}}</h1>
         <p class="price">¥{{$item->price}}</p>
-        {{-- @foreach ($purchases as $purchase)
+        {{-- @foreach ($purchases as $purchase) --}}
           @if ($user_id === $item->user->id)
                <a href="{{route('items.edit',['item_id'=>$item_id])}}" class="purchase">編集</a>
-          @elseif($item->id === $purchase->item_id)
-               <p>うりきれました</p>
+          {{-- @elseif($item->id === $item->purchase->item_id) --}}
+               {{-- <p>うりきれました</p> --}}
           @else
                <div class="">
                   @if ($item->is_liked_by_auth_user())
@@ -24,25 +24,7 @@
                </div>
                <a href="{{route('purchase',['item_id'=>$item->id])}}" class="purchase">購入手続きへ</a>
           @endif
-          @endforeach --}}
-
-            @foreach ($purchases as $purchase)
-            @if ($user_id === $item->user->id)
-                 <a href="{{route('items.edit',['item_id'=>$item_id])}}" class="purchase">編集</a>
-            @elseif($item->id === $purchase->item_id)
-                 <p>うりきれました</p>
-            @else
-                 <div class="">
-                    @if ($item->is_liked_by_auth_user())
-                       <a href="{{route('item.unlike',['item_id'=>$item_id])}}">いいね<span>{{$item->likes->count()}}</span></a>
-                    @else
-                       <a href="{{route('item.like',['item_id'=>$item_id])}}">いいね<span>{{$item->likes->count()}} </span></a>
-                    @endif
-                 </div>
-                 <a href="{{route('purchase',['item_id'=>$item->id])}}" class="purchase">購入手続きへ</a>
-            @endif
-            @endforeach
-
+          {{-- @endforeach --}}
       <h3 class="secttion-title">商品説明</h3>
         <p>{{$item->description}}</p>
       <h3 class="secttion-title">商品の情報</h3>

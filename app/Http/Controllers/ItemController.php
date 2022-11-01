@@ -15,6 +15,7 @@ class ItemController extends Controller
     public function index(Request $request, $item_id){
         $user_id = Auth::id();
         $purchases = Purchase::all();
+        // $purchase = Purchase::where('item_id',$item_id) ->where('user_id',Auth::id())->first();
         $item = Item::find($item_id);
         return view('items.index',['item'=>$item,'item_id'=>$item_id,'user_id'=>$user_id,'purchases'=>$purchases]);
     }

@@ -14,7 +14,8 @@ class PurchaseController extends Controller
     public function index(Request $request, $item_id){
         $user_id = Auth::id();
         $item = Item::find($item_id);
-        return view('purchase.index',['item'=>$item,'item_id'=>$item_id,'user_id'=>$user_id]);
+        $purchases = Purchase::all();
+        return view('purchase.index',['item'=>$item,'item_id'=>$item_id,'user_id'=>$user_id,'purchases'=>$purchases]);
     }
     public function purchase(Request $request, $item_id){
         Purchase::create(['item_id'=>$item_id,'user_id'=>Auth::id(),]);
