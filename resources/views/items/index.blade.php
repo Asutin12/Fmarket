@@ -23,7 +23,7 @@
             </span></a>
             @endif
         </div>
-        <a href="" class="purchase">購入手続きへ</a>
+        <a href="{{route('purchase',['item_id'=>$item->id])}}" class="purchase">購入手続きへ</a>
         @endif
       <h3 class="secttion-title">商品説明</h3>
         <p>{{$item->description}}</p>

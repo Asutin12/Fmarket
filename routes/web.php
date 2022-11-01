@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
+// ホーム画面
 Route::get('sell','App\Http\Controllers\Home\HomeController@sell')->name('sell.home');
 Route::get('home','App\Http\Controllers\Home\HomeController@home')->name('home.index');
 Route::post('home','App\Http\Controllers\Home\HomeController@home')->name('home.index');
@@ -27,25 +28,27 @@ Route::post('mypage','App\Http\Controllers\Home\HomeController@post');
 Route::post('search','App\Http\Controllers\Home\HomeController@search')->name('search.index');
 
 
-
+// アイテム機能
 Route::get('item/{item_id}','App\Http\Controllers\ItemController@index')->name('items.index');
 Route::get('item/edit/{item_id}','App\Http\Controllers\ItemController@edit')->name('items.edit');
 Route::post('item/edit/{item_id}','App\Http\Controllers\ItemController@update')->name('items.edit');
 Route::delete('item/delete/{item_id}','App\Http\Controllers\ItemController@delete')->name('items.delete');
 
+// ライク機能
 Route::get('item/like/{item_id}', 'App\Http\Controllers\ItemController@like')->name('item.like');
 Route::get('item/unlike/{item_id}', 'App\Http\Controllers\ItemController@unlike')->name('item.unlike');
 
-
+// アイテム作成機能
 Route::get('create','App\Http\Controllers\SellController@add')->name('sell.create');
 Route::post('create','App\Http\Controllers\SellController@create');
 Route::get('drafts','App\Http\Controllers\SellController@drafts')->name('sell.drafts');
 
+// ユーザー機能
 Route::get('profile/edit/{user_id}','App\Http\Controllers\AccountController@edit')->name('profile.edit');
 Route::post('profile/edit/{user_id}','App\Http\Controllers\AccountController@update')->name('profile.edit');
 Route::get('profile/{user_id}','App\Http\Controllers\AccountController@show')->name('user.profile');
 
-Route::get('purchase/{item_id}',);
+Route::get('purchase/{item_id}','App\Http\Controllers\PurchaseController@index')->name('purchase');
 
 
 Auth::routes();

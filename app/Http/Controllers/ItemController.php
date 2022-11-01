@@ -11,7 +11,7 @@ use App\Models\Like;
 
 class ItemController extends Controller
 {
-    public function index(Request $request, int $item_id){
+    public function index(Request $request, $item_id){
         $user_id = Auth::id();
         $item = Item::find($item_id);
         return view('items.index',['item'=>$item,'item_id'=>$item_id,'user_id'=>$user_id]);
