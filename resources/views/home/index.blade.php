@@ -12,6 +12,11 @@
     @foreach ($items as $item)
     <a class="item" href="{{route('items.index',['item_id'=>$item->id])}}">
     <img src="{{ '/storage/' . $item->image}}" width="200px"  alt="">
+    @foreach ($purchases as $purchase)
+    @if ($item->id === $purchase->item_id)
+    <p>Sold Out</p>
+    @endif
+    @endforeach
     <p>{{$item->name}}</p>
     <p>¥{{$item->price}}</p>
     </a>

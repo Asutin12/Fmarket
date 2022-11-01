@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\Item;
 use App\Models\User;
 use App\Models\Like;
+use App\Models\Purchase;
 
 
 class HomeController extends Controller
@@ -27,8 +28,8 @@ class HomeController extends Controller
             }
             $items = $query->paginate(20);
         }
-        return view('home.index',['items'=>$items,'user'=>$user,'search'=>$search]);
-        // 'item'=>$item,
+        $purchases =Purchase::all();
+        return view('home.index',['items'=>$items,'user'=>$user,'search'=>$search,'purchases'=>$purchases]);
     }
     public function sell(Request $request){
         return view('sell.home');

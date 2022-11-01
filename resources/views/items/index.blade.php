@@ -9,6 +9,7 @@
     <div class="rigth">
         <h1 class="name">{{$item->name}}</h1>
         <p class="price">¥{{$item->price}}</p>
+        @foreach ($purchases as $purchase)
           @if ($user_id === $item->user->id)
                <a href="{{route('items.edit',['item_id'=>$item_id])}}" class="purchase">編集</a>
           @elseif($item->id === $purchase->item_id)
@@ -23,6 +24,7 @@
                </div>
                <a href="{{route('purchase',['item_id'=>$item->id])}}" class="purchase">購入手続きへ</a>
           @endif
+        @endforeach
       <h3 class="secttion-title">商品説明</h3>
         <p>{{$item->description}}</p>
       <h3 class="secttion-title">商品の情報</h3>
