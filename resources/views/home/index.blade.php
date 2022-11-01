@@ -11,14 +11,18 @@
 <div class="item-box">
     @foreach ($items as $item)
     <a class="item" href="{{route('items.index',['item_id'=>$item->id])}}">
-    <img src="{{ '/storage/' . $item->image}}" width="200px"  alt="">
-    @foreach ($purchases as $purchase)
-    @if ($item->id === $purchase->item_id)
-    <p>Sold Out</p>
-    @endif
-    @endforeach
-    <p>{{$item->name}}</p>
-    <p>¥{{$item->price}}</p>
+    <img class="img" src="{{ '/storage/' . $item->image}}" width="200px" height="200px"  alt="">
+    <div class="flex">
+        <div class="i">
+            <p>{{$item->name}}</p>
+            <p>¥{{$item->price}}</p>
+        </div>
+        @foreach ($purchases as $purchase)
+        @if ($item->id === $purchase->item_id)
+        <p class="soldout">Sold Out</p>
+        @endif
+        @endforeach
+    </div>
     </a>
     @endforeach
 </div>

@@ -52,6 +52,8 @@
 
         /* item.index */
         .item-section{display: flex;justify-content: space-between;margin-right: 250px;}
+        .soldout{transform: rotate(-10deg);-moz-transform: rotate(-10deg);-webkit-transform: rotate(-10deg);}
+        .flex{display: flex;align-items: center;justify-content: space-between;}
     </style>
 </head>
 <body>
