@@ -8,13 +8,15 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\Item;
 use App\Models\User;
 use App\Models\Like;
+use App\Models\Purchase;
 
 class ItemController extends Controller
 {
     public function index(Request $request, $item_id){
         $user_id = Auth::id();
+        $purchase =Purchase::all()->first();
         $item = Item::find($item_id);
-        return view('items.index',['item'=>$item,'item_id'=>$item_id,'user_id'=>$user_id]);
+        return view('items.index',['item'=>$item,'item_id'=>$item_id,'user_id'=>$user_id,'purchase'=>$purchase]);
     }
     // いいね機能
     public function __construct(){
