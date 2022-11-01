@@ -49,6 +49,7 @@ Route::post('profile/edit/{user_id}','App\Http\Controllers\AccountController@upd
 Route::get('profile/{user_id}','App\Http\Controllers\AccountController@show')->name('user.profile');
 
 Route::get('purchase/{item_id}','App\Http\Controllers\PurchaseController@index')->name('purchase');
+Route::get('item/purchase/{item_id}','App\Http\Controllers\PurchaseController@purchase')->name('item.purchase');
 
 
 Auth::routes();
