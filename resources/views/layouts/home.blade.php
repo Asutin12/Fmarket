@@ -12,7 +12,7 @@
         /* .header-right{display: flex;align-items: center;justify-content: space-between;} */
         .header-left{display: flex;align-items: center;justify-content: space-between; width: 800px;}
         /* .search{border: 1px solid gray;padding: 2px 250px;} */
-        .header-list{font-size: 15px; display: flex;align-items: center;width: 500px;justify-content: space-between;text-align: right;}
+        .header-list{font-size: 15px; display: flex;align-items: center;width: 300px;justify-content: space-around; text-align: right;}
         .datail{display: flex;padding-left: 200px;}
         a{text-decoration: none;padding:10px 20px;}
         a:hover{background-color: #ffeeff;border-radius: 7px;}
@@ -50,7 +50,7 @@
 
         /* search */
         .bb{display: flex;}
-        .bb-i{margin-right: 10px;width: 300px; border: 1px solid #8EB8FF;}
+        .bb-i{margin-right: 10px;width: 300px; border: 1px solid #8EB8FF;background-color: #b4c1d1;border-radius: 6px;}
         .s-b{background-color: #8EB8FF;border: none; border-radius: 7px;padding: 10px 15px;}
 
         /* item.index */
@@ -75,10 +75,14 @@
         </div>
         <div class="header-right">
             <ul class="header-list">
+                @guest
                 <p class="header-item"><a href="{{route('register')}}">会員登録</a></p>
                 <p class="header-item"><a href="{{route('home')}}">ログイン</a></p>
+                @endguest
+                @auth
                 <p class="header-item"><a href="{{route('account.mypage')}}">アカウント</a></p>
                 <p class="header-item"><a href="{{route('sell.create')}}">出品</a></p>
+                @endauth
             </ul>
         </div>
     </div>
