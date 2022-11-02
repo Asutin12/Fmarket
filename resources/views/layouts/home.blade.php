@@ -15,6 +15,7 @@
         .header-list{font-size: 15px; display: flex;align-items: center;width: 300px;justify-content: space-around; text-align: right;}
         .datail{display: flex;padding-left: 200px;}
         a{text-decoration: none;padding:10px 20px;}
+        .b {text-decoration: none;padding:10px 20px; color: #8eb8ff;}
         a:hover{background-color: #ffeeff;border-radius: 7px;}
         main{width: 1250px;margin: 0 auto; text-align: center;}
         .title{margin: 0 auto;text-align: center;}
@@ -29,7 +30,7 @@
         section{padding-bottom: 50px;padding-top: 20px;}
         .section-title{text-align: left;}
         .item-box{width: 100%; display: flex;justify-content: flex-start;flex-wrap: wrap}
-        .item{margin-right: 10px;}
+        .item{margin-right: 10px;max-width: 200px}
 
         .detail{display: flex;justify-content: space-around}
         .detail-img{width: 600px;height: 600px;}
@@ -48,25 +49,29 @@
         .profile{display: flex;justify-content: space-around;align-items: center;padding-top: 40px;}
         .p-item{display: flex;align-items: center;width: 200px;justify-content: space-between;}
         .intro{text-align: center;}
-        /* .user-box{text-align: right; display: flex; justify-content: space-between; align-items: center;} */
-        /* .user-item{padding-right: 100px;} */
+        .edit{margin: 0 auto;padding-left: 0px;width:300px;}
+        .row{padding-bottom: 30px;}
+        .name{width: 250px;height:30px;}
+        .i{width: 250px;height: 200px;}
+        .update{background-color: #8eb8ff;border: none; border-radius: 6px;padding: 10px;}
 
         /* search */
         .bb{display: flex;}
-        .bb-i{margin-right: 10px;width: 300px; border: 1px solid #8EB8FF;background-color: #b4c1d1;border-radius: 6px;}
+        .bb-i{margin-right: 10px;width: 300px; border: 1px solid #8EB8FF;border-radius: 6px;}
         .s-b{background-color: #8EB8FF;border: none; border-radius: 7px;padding: 10px 15px;}
 
         /* item.index */
         .item-section{display: flex;justify-content: space-between;margin-right: 250px;}
         .soldout{transform: rotate(-10deg);-moz-transform: rotate(-10deg);-webkit-transform: rotate(-10deg);}
         .flex{display: flex;align-items: center;justify-content: space-between;}
+        .i{color: gray;}
     </style>
 </head>
 <body>
 <header>
     <div class="header">
         <div class="header-left">
-            <a href="{{route('home.index')}}" class="header-title">Title</a>
+            <a class="b" href="{{route('home.index')}}" class="header-title">Title</a>
             <div class="search">
                 <form class="bb" method="get" action="{{route('home.index')}}">
                     <input class="bb-i" type="search" placeholder="" name="search" value="@if (isset($search)) {{ $search }} @endif">
@@ -79,12 +84,12 @@
         <div class="header-right">
             <ul class="header-list">
                 @guest
-                <p class="header-item"><a href="{{route('register')}}">会員登録</a></p>
-                <p class="header-item"><a href="{{route('home')}}">ログイン</a></p>
+                <p class="header-item"><a class="b" href="{{route('register')}}">会員登録</a></p>
+                <p class="header-item"><a class="b" href="{{route('home')}}">ログイン</a></p>
                 @endguest
                 @auth
-                <p class="header-item"><a href="{{route('account.mypage')}}">アカウント</a></p>
-                <p class="header-item"><a href="{{route('sell.create')}}">出品</a></p>
+                <p class="header-item"><a class="b" href="{{route('account.mypage')}}">アカウント</a></p>
+                <p class="header-item"><a class="b" href="{{route('sell.create')}}">出品</a></p>
                 @endauth
             </ul>
         </div>
