@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>@yield('title')</title>
     <link rel="stylesheet" href="/resources/css/reset.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <script src="https://kit.fontawesome.com/35a44d6fd7.js" crossorigin="anonymous"></script>
     <style>
         .header{display: flex;align-items: center;justify-content: space-between;padding:0px 30px;padding-top: 10px;}
         /* .header-right{display: flex;align-items: center;justify-content: space-between;} */
@@ -29,8 +29,8 @@
         .footer-buttom{padding: 20px;}
         section{padding-bottom: 50px;padding-top: 20px;}
         .section-title{text-align: left;}
-        .item-box{width: 100%; display: flex;justify-content: flex-start;flex-wrap: wrap}
-        .item{margin-right: 10px;max-width: 200px}
+        .item-box{width: 100%; display: flex;justify-content: flex-start;flex-wrap: wrap;}
+        .item{margin-right: 10px;max-width: 198px;border: 1px solid #8eb8ff;border-radius: 10px; margin-bottom: 10px;}
 
         .detail{display: flex;justify-content: space-around}
         .detail-img{width: 600px;height: 600px;}
@@ -62,9 +62,12 @@
 
         /* item.index */
         .item-section{display: flex;justify-content: space-between;margin-right: 250px;}
-        .soldout{transform: rotate(-10deg);-moz-transform: rotate(-10deg);-webkit-transform: rotate(-10deg);}
+        .soldout{font-weight: bold; transform: rotate(-20deg);-moz-transform: rotate(-20deg);-webkit-transform: rotate(-20deg);background-color: red;padding:0px 60px; color: #fff;font-size:10px;border-radius: 10px}
         .flex{display: flex;align-items: center;justify-content: space-between;}
         .i{color: gray;}
+        .user-link{display: flex;justify-content: space-between; align-items: center;padding-right: 250px;}
+
+        .like{padding-bottom: 20px;}
     </style>
 </head>
 <body>
