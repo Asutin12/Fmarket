@@ -48,6 +48,7 @@ Route::get('profile/edit/{user_id}','App\Http\Controllers\AccountController@edit
 Route::post('profile/edit/{user_id}','App\Http\Controllers\AccountController@update')->name('profile.edit');
 Route::get('profile/{user_id}','App\Http\Controllers\AccountController@show')->name('user.profile');
 
+// 購入機能
 Route::get('purchase/{item_id}','App\Http\Controllers\PurchaseController@index')->name('purchase');
 Route::get('item/purchase/{item_id}','App\Http\Controllers\PurchaseController@purchase')->name('item.purchase');
 

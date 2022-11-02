@@ -6,14 +6,17 @@
 @endsection
 
 @section('content')
+<h1 class="home-title">マイリスト</h1>
+<hr>
 <section>
     <div class="section-title">いいねした商品</div>
+    @auth
     @foreach ($likes as $like)
-    @if ($auth_id = $like->user_id)
+    @if ($user->id === $like->user_id)
     <p>{{$like->item_id}}</p>
     @endif
     @endforeach
-    <hr>
+    @endauth
 </section>
 {{-- <section>
     <div class="section-title">フォロー中のユーザー</div>

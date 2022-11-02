@@ -19,6 +19,9 @@ class PurchaseController extends Controller
     }
     public function purchase(Request $request, $item_id){
         Purchase::create(['item_id'=>$item_id,'user_id'=>Auth::id(),]);
+        $item = Item::find($item_id);
+        $item->sold = 'soldOut';
+        $item->save();
         return redirect ()->route('home.index');
     }
 }

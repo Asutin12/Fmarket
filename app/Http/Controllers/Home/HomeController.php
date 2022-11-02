@@ -24,7 +24,8 @@ class HomeController extends Controller
             $spaceConversion = mb_convert_kana($search, 's');
             $wordArraySearched = preg_split('/[\s,]+/',$spaceConversion,-1,PREG_SPLIT_NO_EMPTY);
             foreach($wordArraySearched as $value) {
-                $query->where('name', 'like', '%'.$value.'%');
+                $query->where('name', 'like', '%'.$value.'%')
+                      ->orwhere('price', 'like', '%'.$value.'%');
             }
             $items = $query->paginate(20);
         }
@@ -36,6 +37,7 @@ class HomeController extends Controller
     }
     public function mylist(Request $request, $user_id){
             $user = User::find($user_id);
+            // $user = Auth::user($user_id);
             $likes = DB::select('select * from likes');
             return view('home.mylist',['user'=>$user,'user_id'=>$user_id,'likes'=>$likes]);
     }

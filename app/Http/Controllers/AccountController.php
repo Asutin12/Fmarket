@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use App\Models\User;
 use App\Models\Item;
+use App\Models\Purchase;
 
 
 class AccountController extends Controller
@@ -34,7 +35,8 @@ class AccountController extends Controller
     }
     public function show(Request $request, int $user_id){
         $auth_id = Auth::id();
+        $purchases =Purchase::all();
         $user = User::find($user_id);
-        return view('account.profile',['user_id'=>$user_id,'user'=>$user,'auth_id'=>$auth_id]);
+        return view('account.profile',['user_id'=>$user_id,'user'=>$user,'auth_id'=>$auth_id,'purchases'=>$purchases]);
     }
 }

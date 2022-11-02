@@ -7,7 +7,7 @@
     <title>@yield('title')</title>
     <style>
         a{text-decoration: none;}
-        .header-right{display: flex;align-items: center;justify-content: space-between;}
+        .header{display: flex;align-items: center;justify-content: space-between;padding: 20px;}
         .header-list{display: flex;align-items: center;width: 600px;justify-content: space-between;}
         .title{text-align: center; font-size: 30px;}
         .content{width: 550px; text-align: center; margin: 0 auto;font-weight: bold}
@@ -27,13 +27,12 @@
 </head>
 <body>
         <header>
-            <div class="header-right">
+            <div class="header">
                 <a href="{{route('home.index')}}" class="header-title">Title</a>
             </div>
             <hr>
         </header>
         <main>
-            <a href="{{route('sell.home')}}"><</a>
             <div class="content">
              @yield('content')
             </div>

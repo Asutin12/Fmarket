@@ -8,14 +8,14 @@
     <link rel="stylesheet" href="/resources/css/reset.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
     <style>
-        .header{display: flex;align-items: center;justify-content: space-between;padding:0px 30px;}
+        .header{display: flex;align-items: center;justify-content: space-between;padding:0px 30px;padding-top: 10px;}
         /* .header-right{display: flex;align-items: center;justify-content: space-between;} */
         .header-left{display: flex;align-items: center;justify-content: space-between; width: 800px;}
         /* .search{border: 1px solid gray;padding: 2px 250px;} */
         .header-list{font-size: 15px; display: flex;align-items: center;width: 500px;justify-content: space-between;text-align: right;}
         .datail{display: flex;padding-left: 200px;}
         a{text-decoration: none;padding:10px 20px;}
-        a:hover{background-color: #ffeeff;}
+        a:hover{background-color: #ffeeff;border-radius: 7px;}
         main{width: 1250px;margin: 0 auto; text-align: center;}
         .title{margin: 0 auto;text-align: center;}
         .mini-title{padding-bottom: 20px;text-align: left;}
@@ -40,15 +40,18 @@
 
         /* Account */
         .user-edit{border:1px solid red; color: red;border-radius: 7px;}
-        .account{width: 600px;margin-left: 300px;}
+        .account{width: 700px;margin: 0 auto;border: 1px dotted #8eb8ff;margin-top: 40px;padding: 20px;border-radius:30px}
         .account-img{padding-right: 10px;}
-        .account-menu{display: flex;align-items: center;}
-        .user-box{text-align: right; display: flex; justify-content: space-between; align-items: center;}
-        .user-item{padding-right: 100px;}
+        .account-menu{display: flex;align-items: center;justify-content:space-around;}
+        .nn{display: flex;justify-content: space-between;align-items: center;}
+        .dropdown-menu{text-align: right;}
+        /* .user-box{text-align: right; display: flex; justify-content: space-between; align-items: center;} */
+        /* .user-item{padding-right: 100px;} */
 
         /* search */
         .bb{display: flex;}
-        .bb-i{margin-right: 10px;width: 200px;}
+        .bb-i{margin-right: 10px;width: 300px; border: 1px solid #8EB8FF;}
+        .s-b{background-color: #8EB8FF;border: none; border-radius: 7px;padding: 10px 15px;}
 
         /* item.index */
         .item-section{display: flex;justify-content: space-between;margin-right: 250px;}
@@ -65,7 +68,7 @@
                 <form class="bb" method="get" action="{{route('home.index')}}">
                     <input class="bb-i" type="search" placeholder="" name="search" value="@if (isset($search)) {{ $search }} @endif">
                     <div>
-                        <button type="submit">検索</button>
+                        <button class="s-b" type="submit">検索</button>
                     </div>
                 </form>
             </div>
@@ -75,7 +78,7 @@
                 <p class="header-item"><a href="{{route('register')}}">会員登録</a></p>
                 <p class="header-item"><a href="{{route('home')}}">ログイン</a></p>
                 <p class="header-item"><a href="{{route('account.mypage')}}">アカウント</a></p>
-                <p class="header-item"><a href="{{route('sell.home')}}">出品</a></p>
+                <p class="header-item"><a href="{{route('sell.create')}}">出品</a></p>
             </ul>
         </div>
     </div>
