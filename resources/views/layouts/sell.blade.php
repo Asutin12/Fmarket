@@ -9,6 +9,7 @@
         a{text-decoration: none;}
         .header{display: flex;align-items: center;justify-content: space-between;padding: 20px;}
         .header-list{display: flex;align-items: center;width: 600px;justify-content: space-between;}
+        .header-title{color: #8eb8ff;}
         .title{text-align: center; font-size: 30px;}
         .content{width: 550px; text-align: center; margin: 0 auto;font-weight: bold}
         section{padding-top: 20px;}
@@ -17,7 +18,7 @@
         input{width: 100%;line-height: 2;padding: 10px;margin-top: 10px;}
         select{width: 575px;margin-bottom: 20px;padding: 10px;margin-top: 10px;}
         textarea{width: 100%;height: 200px;padding: 10px;margin-top: 10px;}
-        button{ color: rgb(21, 1, 18);width: 80%;padding: 10px;border-radius: 5px;border:1px solid gray; margin-bottom: 20px;margin-top: 40px;}
+        button{ background-color:#8eb8ff;width: 80%;padding: 10px;border-radius: 5px;border:none; margin-bottom: 20px;margin-top: 40px;}
         .update{background-color:aliceblue;}
         .delete{background-color:fff;}
         footer{background-color: pink;}

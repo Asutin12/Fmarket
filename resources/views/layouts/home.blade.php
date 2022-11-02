@@ -44,8 +44,9 @@
         .account{width: 700px;margin: 0 auto;border: 1px dotted #8eb8ff;margin-top: 40px;padding: 20px;border-radius:30px}
         .account-img{padding-right: 10px;}
         .account-menu{display: flex;align-items: center;justify-content:space-around;}
-        .nn{display: flex;justify-content: space-between;align-items: center;width: 300px;}
-        .dropdown-menu{text-align: right;}
+        .nn{display: flex;justify-content: space-between;align-items: center;width: 300px;color: gray;}
+        .un{color: #8eb8ff;}
+        .dropdown-menu{color:#fff;display: block;text-align: right;}
         .profile{display: flex;justify-content: space-around;align-items: center;padding-top: 40px;}
         .p-item{display: flex;align-items: center;width: 200px;justify-content: space-between;}
         .intro{text-align: center;}
