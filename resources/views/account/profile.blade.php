@@ -19,7 +19,7 @@
     @endif
 </div>
 @if ($user->introduction === null)
-<p class="intro">自己紹介文はありません</p>
+<p class="intro">自己紹介文は登録されていません</p>
 @else
 <p class="intro">{{$user->introduction}}</p>
 @endif
