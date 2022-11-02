@@ -23,7 +23,7 @@
         .home-title{color: gray;padding-left: 200px;width: 300px;font-size: 25px}
         .sell{display: flex;justify-content: space-between; margin: 0 auto; text-align: center;}
         .sell-item{border: 1px solid #b4c1d1;border-radius:7px; padding:50px 100px;width: 150px;}
-        footer{background-color: pink;}
+        footer{background-color: #8eb8ff;}
         .footer{width: 50%;margin-top: 30px; height: 400px;display: flex;justify-content: space-between;text-align: left;margin-top: 200px;}
         .footer-buttom{padding: 20px;}
         section{padding-bottom: 50px;padding-top: 20px;}
@@ -43,8 +43,11 @@
         .account{width: 700px;margin: 0 auto;border: 1px dotted #8eb8ff;margin-top: 40px;padding: 20px;border-radius:30px}
         .account-img{padding-right: 10px;}
         .account-menu{display: flex;align-items: center;justify-content:space-around;}
-        .nn{display: flex;justify-content: space-between;align-items: center;}
+        .nn{display: flex;justify-content: space-between;align-items: center;width: 300px;}
         .dropdown-menu{text-align: right;}
+        .profile{display: flex;justify-content: space-around;align-items: center;padding-top: 40px;}
+        .p-item{display: flex;align-items: center;width: 200px;justify-content: space-between;}
+        .intro{text-align: center;}
         /* .user-box{text-align: right; display: flex; justify-content: space-between; align-items: center;} */
         /* .user-item{padding-right: 100px;} */
 
