@@ -35,7 +35,7 @@
         .detail{display: flex;justify-content: space-around}
         .detail-img{width: 600px;height: 600px;}
         .rigth{width: 500px;}
-        .purchase{background-color: red;color: #fff;width: 92%;display: inline-block;text-align: center;}
+        .purchase{background-color: red;color: #fff;width: 92%;display: inline-block;text-align: center;border-radius: 7px;}
         .price{color: red; font-weight: bold;font-size: 25px;}
         .section{padding-bottom: 5px; padding-top: 5px;}
 
