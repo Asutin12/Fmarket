@@ -18,15 +18,3 @@ class Category extends Model
         return $this->hasMany(Item::class);
     }
 }
-
-<?php
-
-namespace App\Models;
-
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
-
-class DelivaryCharge extends Model
-{
-    use HasFactory;
-}
