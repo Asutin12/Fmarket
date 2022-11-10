@@ -4,6 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Item;
+use App\Models\User;
 
 class Like extends Model
 {
@@ -11,7 +13,8 @@ class Like extends Model
 
     protected $fillable = ['item_id','user_id'];
 
-    public function item(){
+    public function item()
+    {
         return $this->belongsTo(Item::class);
     }
 
