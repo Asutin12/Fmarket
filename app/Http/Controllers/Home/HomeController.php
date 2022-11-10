@@ -16,7 +16,6 @@ class HomeController extends Controller
 {
     public function home(Request $request){
         $user = Auth::user();
-        // $items = DB::select('select * from items');
         $items = Item::paginate(20);
         $search = $request->input('search');
         $query = Item::query();
@@ -37,7 +36,6 @@ class HomeController extends Controller
     }
     public function mylist(Request $request, $user_id){
             $user = User::find($user_id);
-            // $user = Auth::user($user_id);
             $likes = DB::select('select * from likes');
             return view('home.mylist',['user'=>$user,'user_id'=>$user_id,'likes'=>$likes]);
     }
