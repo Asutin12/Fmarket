@@ -69,6 +69,7 @@
         .user-link{display: flex;justify-content: space-between; align-items: center;padding-right: 250px;}
 
         .like{padding-bottom: 20px;}
+        
     </style>
 </head>
 <body>
