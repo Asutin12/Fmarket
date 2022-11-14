@@ -13,7 +13,7 @@ use App\Models\Category;
 class SellController extends Controller
 {
     public function add(Request $request){
-        $categories = Category::all();
+        $categories =DB::select('select * from categories');
         return view('sell.create',compact('categories'));
     }
     public function create(Request $request){

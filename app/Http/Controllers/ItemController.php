@@ -36,7 +36,7 @@ class ItemController extends Controller
     // 編集機能
     public function edit(Request $request,int $item_id){
         $item = Item::find($item_id);
-        $categories = Category::all();
+        $categories =DB::select('select * from categories');
         return view('items.edit',['item_id'=>$item_id,'item'=>$item,'categories'=>$categories]);
     }
     public function update(Request $request, int $item_id){
