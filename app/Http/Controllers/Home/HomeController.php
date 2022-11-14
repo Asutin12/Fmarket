@@ -36,7 +36,7 @@ class HomeController extends Controller
     }
     public function mylist(Request $request, $user_id){
             $user = User::find($user_id);
-            $likes = DB::select('select * from likes');
+            $likes = Like::all();
             return view('home.mylist',['user'=>$user,'user_id'=>$user_id,'likes'=>$likes]);
     }
     public function index(Request $request){
@@ -44,7 +44,7 @@ class HomeController extends Controller
         return view('account.mypage',compact('user'));
     }
     public function post(Request $request){
-        $items = DB::select('select * from users');
+        $items = User::all();
         return view('account.mypage',['items'=>$items]);
     }
     public function search(Request $request,int $item_id){
